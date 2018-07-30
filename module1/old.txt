@@ -12,7 +12,7 @@ Pseudo code
 		 ii. Set freqcount = 0
 		iii. Do the following n-1 times, j startr at i:
 			1. if numarr[i] == numarr[j]:
-				a. Add 1 to freqcount
+				a. Add 1 to freqc ount
 			2. Add 1 to j
 		 iv. if freqconnt > max:
 			1. Set max = freqcount
