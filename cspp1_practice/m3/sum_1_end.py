@@ -2,10 +2,8 @@
 @author :kpkishankrishna
 iterate even reverse
 '''
-n = 1
 a = int(input())
-sum=0
-while n <= a:
-    sum = sum + n
-    n += 1
+sum_ = 0
+for n in range(1, a+1, 1):
+    sum_ = sum_ + n
 print(sum)
