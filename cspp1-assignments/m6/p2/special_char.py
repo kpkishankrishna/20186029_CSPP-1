@@ -10,9 +10,10 @@ def main():
     '''
     str_input = input()
     str_in2 = ""
+    temp = ""
     for i in str_input:
         if i in "!@#$%^&*()_+{}:":
-            print(" ")
+            temp = temp + " "
         else:
             str_in2 += i
     print(str_in2)
