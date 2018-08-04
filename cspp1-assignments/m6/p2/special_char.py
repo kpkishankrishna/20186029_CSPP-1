@@ -13,7 +13,7 @@ def main():
     temp = ""
     for i in str_input:
         if i in "!@#$%^&*()_+{}:":
-            temp = temp + " "
+            i = " "
         else:
             str_in2 += i
     print(str_in2)
