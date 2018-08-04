@@ -18,7 +18,7 @@ def main():
         int_a = int_a//10
     if int_input < 0:
         int_pro *= -1
-    elif int_pro == 0:
+    elif int_input == 0:
         int_pro = 0
     print(int_pro)
 
