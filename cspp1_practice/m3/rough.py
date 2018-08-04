@@ -1,3 +1,2 @@
-n = "abcdef"
-for i in range(-1:4:-2):
-	print(i)
+str = "krishna"
+print(str[-1:-3:-1]) 
