@@ -9,8 +9,7 @@ def main():
     Read string from the input, store it in variable str_input.
     '''
     str_input = input()
-    str_in2 = ""
-    temp = ""
+    str_in2 = ""    
     for i in str_input:
         if i in "!@#$%^&*()_+{}:":
             i = " "
