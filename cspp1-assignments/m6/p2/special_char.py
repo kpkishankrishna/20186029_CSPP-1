@@ -6,6 +6,7 @@ Output has three spaces, which are to be replaced with these special characters
 '''
 def main():
     '''
+    author@ : kpishankrishna
     Read string from the input, store it in variable str_input.
     '''
     str_input = input()
