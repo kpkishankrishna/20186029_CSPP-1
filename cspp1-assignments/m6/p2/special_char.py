@@ -12,8 +12,8 @@ def main():
     str_input = input()
     str_in2 = ""
     for i in str_input:
-        if j in "!@#$%^&*()_+{}:":
-            j = " "
+        if i in "!@#$%^&*()_+{}:":
+            i = " "
         else:
             str_in2 += i
     print(str_in2)
