@@ -12,7 +12,7 @@ def main():
     str_in2 = ""
     for i in str_input:
         if i in "!@#$%^&*()_+{}:":
-            print(' ')
+            print('/n')
         else:
             str_in2 += i
     print(str_in2)
