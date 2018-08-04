@@ -18,6 +18,8 @@ def main():
         int_a = int_a//10
     if int_input < 0:
         int_pro *= -1
+    if int_pro == 0:
+        int_pro = 0
     print(int_pro)
 
 if __name__ == "__main__":
