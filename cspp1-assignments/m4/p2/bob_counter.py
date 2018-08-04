@@ -7,6 +7,7 @@ Number of times bob occurs is: 2
 '''
 
 def main():
+    
     '''
     the input string is in s
     remove pass and start your code here
