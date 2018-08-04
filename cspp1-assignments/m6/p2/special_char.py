@@ -11,7 +11,7 @@ def main():
     str_input = input()
     str_in2 = ""
     for i in str_input:
-        if i in "!@#$%^&*":
+        if i in "!@#$%^&*()_+{}:":
             pass
         else:
             str_in2 += i
