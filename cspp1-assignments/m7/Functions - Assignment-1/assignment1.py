@@ -26,6 +26,9 @@
 '''
 
 def payingDebtOff_InAYear(Updatedbalance_eachmonth, annual_Interestrate, Monthly_Paymentrate):
+    '''
+    Input updated balance, annual interst rate, montly payment rate
+    '''
     for count_month in range(1, 13):
         Monthly_interestrate = (annual_Interestrate/12.0)
         Minimummonthly_payment = (Monthly_Paymentrate) * (Updatedbalance_eachmonth)
@@ -33,6 +36,9 @@ def payingDebtOff_InAYear(Updatedbalance_eachmonth, annual_Interestrate, Monthly
         Updatedbalance_eachmonth = Monthlyunpaid_balance + (Monthly_interestrate * Monthlyunpaid_balance)
     return round(Updatedbalance_eachmonth, 2)
 def main():
+    '''
+    Main function
+    '''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
