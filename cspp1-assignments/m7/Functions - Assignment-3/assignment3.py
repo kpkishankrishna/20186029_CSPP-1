@@ -38,24 +38,24 @@
 
 
 def payingDebtOffInAYear(balance, annualInterestRate):
-	init_balance = balance_in
-	moninterest_rate = annualInterestRate/12
-	low_i = init_balance/12
-	up_i = (init_balance * (1+moninterest_rate)**12)/12.0
-	epsilon = 0.03
-	while abs(balance_in) > epsilon:
-		mon_paymentrate = (up_i + low_i)/2
-		balance_in = init_balance
-		for _ in range(12):
-			ans_i = balance_in - mon_paymentrate
-			balance_in = ans_i + (ans_i * moninterest_rate)
-		if balance_in > epsilon:
-			low_i = mon_paymentrate
-		elif balance_in < -epsilon:
-			up_i = mon_paymentrate
-		else:
-			break
-	return str(round(mon_paymentrate,2))
+    init_balance = balance_in
+    moninterest_rate = annualInterestRate/12
+    low_i = init_balance/12
+    up_i = (init_balance * (1+moninterest_rate)**12)/12.0
+    epsilon = 0.03
+    while abs(balance_in) > epsilon:
+        mon_paymentrate = (up_i + low_i)/2
+        balance_in = init_balance
+        for _ in range(12):
+            ans_i = balance_in - mon_paymentrate
+            balance_in = ans_i + (ans_i * moninterest_rate)
+        if balance_in > epsilon:
+            low_i = mon_paymentrate
+        elif balance_in < -epsilon:
+            up_i = mon_paymentrate
+        else:
+            break
+    return str(round(mon_paymentrate,2))
 
 
 def main():
@@ -64,6 +64,5 @@ def main():
     data = data.split(' ')
     data = list(map(float, data))
     print("Lowest Payment:", payingDebtOffInAYear(data[0],data[1]))
-    
 if __name__== "__main__":
     main()
