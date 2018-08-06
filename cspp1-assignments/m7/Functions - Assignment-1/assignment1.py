@@ -30,8 +30,8 @@ def payingdebtoff_inayear(updatedbalance_eachmonth, annual_interestrate, monthly
     Input updated balance, annual interst rate, montly payment rate
     '''
     for count_month in range(1, 13):
-        monthly_interestrate = (annual_interestrate/12.0)
-        minimummonthly_payment = (monthly_paymentrate) * (updatedbalance_eachmonth)
+        monthly_interestrate = annual_interestrate/12.0
+        minimummonthly_payment = monthly_paymentrate * updatedbalance_eachmonth
         monthlyunpaid_balance = updatedbalance_eachmonth - minimummonthly_payment
         updatedbalance_eachmonth = monthlyunpaid_balance + (monthly_interestrate * monthlyunpaid_balance)
     return round(updatedbalance_eachmonth, 2)
