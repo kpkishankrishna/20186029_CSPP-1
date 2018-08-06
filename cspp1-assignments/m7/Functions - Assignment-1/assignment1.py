@@ -25,16 +25,16 @@
   Monthly unpaid balance)
 '''
 
-def payingDebtOff_InAYear(Updatedbalance_eachmonth, annual_Interestrate, Monthly_Paymentrate):
+def payingdebtoff_inayear(updatedbalance_eachmonth, annual_interestrate, monthly_paymentrate):
     '''
     Input updated balance, annual interst rate, montly payment rate
     '''
     for count_month in range(1, 13):
-        Monthly_interestrate = (annual_Interestrate/12.0)
-        Minimummonthly_payment = (Monthly_Paymentrate) * (Updatedbalance_eachmonth)
-        Monthlyunpaid_balance = Updatedbalance_eachmonth - Minimummonthly_payment
-        Updatedbalance_eachmonth = Monthlyunpaid_balance + (Monthly_interestrate * Monthlyunpaid_balance)
-    return round(Updatedbalance_eachmonth, 2)
+        monthly_interestrate = (annual_interestrate/12.0)
+        minimummonthly_payment = (monthly_paymentrate) * (updatedbalance_eachmonth)
+        monthlyunpaid_balance = updatedbalance_eachmonth - minimummonthly_payment
+        updatedbalance_eachmonth = monthlyunpaid_balance + (monthly_interestrate * monthlyunpaid_balance)
+    return round(updatedbalance_eachmonth, 2)
 def main():
     '''
     Main function
@@ -42,7 +42,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Remaining balance:",(payingDebtOff_InAYear(data[0],data[1],data[2])))
+    print("Remaining balance:",(payingdebtoff_inayear(data[0],data[1],data[2])))
 
 if __name__== "__main__":
     main()
