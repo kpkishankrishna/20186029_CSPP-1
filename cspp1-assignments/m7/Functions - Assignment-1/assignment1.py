@@ -32,7 +32,6 @@ def payingDebtOff_InAYear(Updatedbalance_eachmonth, annual_Interestrate, Monthly
         Minimummonthly_payment = (Monthly_Paymentrate) * (Updatedbalance_eachmonth)
         Monthlyunpaid_balance = Updatedbalance_eachmonth - Minimummonthly_payment
         Updatedbalance_eachmonth = Monthlyunpaid_balance + (Monthly_interestrate * Monthlyunpaid_balance)
-        
     return round(Updatedbalance_eachmonth, 2)
 def main():
     data = input()
