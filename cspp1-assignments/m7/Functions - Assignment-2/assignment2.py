@@ -1,3 +1,5 @@
+'''
+Author@ : kpkishankrishna
 # Assignment-2 - Paying Debt off in a Year
 
 # Now write a program that calculates the minimum fixed monthly payment needed in order pay off a credit card balance within 12 months.
@@ -20,10 +22,12 @@
 # Monthly interest rate = (Annual interest rate) / 12.0
 # Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
 # Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
-
-
+'''
 
 def payingDebtOffInAYear(balance_kp, annualInterestRate, set_min):
+    '''
+    given input balance_kp, annualInterestRate, set_min
+    '''
     if balance_kp <= 0:
         minimum_fixed = 0
         return minimum_fixed
@@ -41,10 +45,13 @@ def payingDebtOffInAYear(balance_kp, annualInterestRate, set_min):
             minimum_fixed += 10
             balance_kp = set_min
 def main():
+    '''
+    main fuction
+    '''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
     print("Lowest Payment:",payingDebtOffInAYear(data[0],data[1],data[0]))
     
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
