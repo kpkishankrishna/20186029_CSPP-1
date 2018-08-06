@@ -23,7 +23,7 @@
 
 
 
-def payingDebtOffInAYear(balance_kp, annualInterestRate):
+def payingDebtOffInAYear(balance_kp, annualInterestRate, set_min):
 	if balance_kp <= 0:
 		minimum_fixed = 0
 		return minimum_fixed
@@ -44,7 +44,7 @@ def main():
 	data = input()
 	data = data.split(' ')
 	data = list(map(float, data))
-	print("lowest Payment:",payingDebtOffInAYear(data[0],data[1]))
+	print("lowest Payment:",payingDebtOffInAYear(data[0],data[1],data[0]))
 	
 if __name__== "__main__":
 	main()
