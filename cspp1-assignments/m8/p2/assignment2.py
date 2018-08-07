@@ -5,25 +5,25 @@ Author@: kpkishankrishna
  the sum of digits of given number.
 # This function takes in one number and returns one number.
 '''
-def sumofdigits(n):
+def sumofdigits(n_1):
     '''
     n is positive Integer
 
     returns: a positive integer, the sum of digits of n.
     '''
     # Your code here
-    if n == 0:
+    if n_1 == 0:
         return 0
     else:
-        return n%10 + sumofdigits((n//10))
+        return n_1%10 + sumofdigits((n_1//10))
 
 
 def main():
     '''
     main function
     '''
-    a = input()
-    print(sumofdigits(int(a)))  
+    a_1 = input()
+    print(sumofdigits(int(a_1)))  
 
 if __name__== "__main__":
     main()
