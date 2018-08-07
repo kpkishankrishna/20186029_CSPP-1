@@ -12,7 +12,7 @@ def sumofdigits(n):
     '''
     # Your code here
     if n%10 == 0:
-        return n
+        return 0
     else:
         return(n%10 + sumofdigits((n//10)))
 
