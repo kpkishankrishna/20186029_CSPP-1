@@ -18,6 +18,8 @@ def factorial(n_1):
 
 
 def main():
+    '''
+    '''
     a_1 = input()
     print(factorial(int(a_1)))
 
