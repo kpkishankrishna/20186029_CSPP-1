@@ -11,11 +11,9 @@ def factorial(n):
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
-    if n == 1:
+    if n == 0 or n == 1:
         return 1
-    else:
-        return (n*(factorial(n-1)))
-    
+    return n*factorial(n-1)
 
 
 def main():
