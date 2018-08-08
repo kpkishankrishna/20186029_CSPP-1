@@ -19,7 +19,7 @@ def is_word_guessed(secret_word, letters_guessed):
         for j in letters_guessed:
             if i == j:
                count = count+1
-    if count = len[secret_word]:
+    if count = len(secret_word[]):
         return True
     else:
         return False
