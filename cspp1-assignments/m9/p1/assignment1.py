@@ -15,10 +15,12 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-    if secret_word in letters_guessed:
-        return True
-    else:
-        return False
+    for i in secret_word[]:
+        for j in letters_guessed[]:
+            if i == j:
+                return True
+            else:
+                return False
 
 def main():
     '''
