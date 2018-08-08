@@ -15,7 +15,7 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-    a = len(secret_word)
+    count = 0
     for i in range(len(secret_word)):
         for j in range(len(letters_guessed)):
             if secret_word[i] == letters_guessed[j]:
