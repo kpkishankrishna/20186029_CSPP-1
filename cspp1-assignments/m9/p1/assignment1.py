@@ -22,8 +22,6 @@ def is_word_guessed(secret_word, letters_guessed):
             if secret_word[i] == letters_guessed[j]:
                count = count+1
             return False
-    if count == len(secret_word):
-        return True
     
 
 
