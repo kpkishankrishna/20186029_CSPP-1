@@ -15,7 +15,6 @@ def get_available_letters(letters_guessed):
     '''
     str2 = ""
     check_str = string.ascii_lowercase
-    print(check_str)
     for i in check_str:
         if i not in letters_guessed:
             str2 += i
