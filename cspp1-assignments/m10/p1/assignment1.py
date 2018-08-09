@@ -19,7 +19,7 @@ def get_available_letters(letters_guessed):
         if i not in letters_guessed:
             str2 += i
     return str2
-    
+
 def main():
     '''
     Main function for the given program
@@ -30,7 +30,6 @@ def main():
     for char in user_input:
         data.append(char[0])
     print(get_available_letters(data))
-
 
 if __name__ == "__main__":
     main()
