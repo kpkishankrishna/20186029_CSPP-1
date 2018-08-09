@@ -14,12 +14,15 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     str2 = ""
-    check_str = string.ascii_lowercase
-    for i in check_str:
+    # check_str = string.ascii_lowercase
+    # for i in check_str:
+    #     if i not in letters_guessed:
+    #         str2 += i
+    # return str2
+    for i in range(chr[65: 122]):
         if i not in letters_guessed:
             str2 += i
     return str2
-
 def main():
     '''
     Main function for the given program
