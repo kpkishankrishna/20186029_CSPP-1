@@ -35,8 +35,10 @@ def create_social_network(List):
     # remove the pass below and start writing your code
     d = {}
     for i in range(0,len(List), 3):
-        if List[i] not in d:
+        if List[i+1] in 'follows':
             d[List[i]] = List[i+2].split(',')
+        else:
+            d = {}
 
     return d
 
