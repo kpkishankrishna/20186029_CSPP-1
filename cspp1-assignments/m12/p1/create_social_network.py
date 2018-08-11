@@ -36,7 +36,7 @@ def create_social_network(list_1):
     dictionary_sn = {}
     for i in range(0, len(list_1), 3):
         if list_1[i+1] in 'follows':
-            d[list_1[i]] = list_1[i+2].split(',')
+            dictionary_sn[list_1[i]] = list_1[i+2].split(',')
         else:
             dictionary_sn = {}
 
