@@ -41,6 +41,7 @@ def delete_person(network, arg1):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
+    network[arg1].remove(arg2)
     return network
 
 def main():
