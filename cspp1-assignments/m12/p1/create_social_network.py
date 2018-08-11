@@ -2,7 +2,7 @@
     Assignment-1 Create Social Network
 '''
 
-def create_social_network(List):
+def create_social_network(list_1):
     '''
         The data argument passed to the function is a string
         It represents simple social network data
@@ -33,28 +33,27 @@ def create_social_network(List):
     '''
 
     # remove the pass below and start writing your code
-    d = {}
-    for i in range(0,len(List), 3):
-        if List[i+1] in 'follows':
-            d[List[i]] = List[i+2].split(',')
+    dictionary_sn = {}
+    for i in range(0, len(list_1), 3):
+        if list_1[i+1] in 'follows':
+            d[list_1[i]] = list_1[i+2].split(',')
         else:
-            d = {}
+            dictionary_sn = {}
 
-    return d
+    return dictionary_sn
 
 def main():
     '''
         handling testcase input and printing output
     '''
-    L = []
+    list_1 = []
     lines = int(input())
     for i in range(lines):
         inp_l = input().split(" ")
-        L.extend(inp_l)
+        list_1.extend(inp_l)
 
 
-    
-    print(create_social_network(L))
+    print(create_social_network(list_1))
 
 if __name__ == "__main__":
     main()
