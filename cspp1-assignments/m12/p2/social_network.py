@@ -14,9 +14,8 @@ def follow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    if arg2 not in network[arg1]
+    network[arg1].append(arg2)
     return network
-    
 
 
 def unfollow(network, arg1, arg2):
@@ -61,7 +60,7 @@ def main():
             network = unfollow(network, output[1], output[2])
         elif output[0] == "delete":
             network = delete_person(network, output[1])
-        
+
 
     print(network)
 
