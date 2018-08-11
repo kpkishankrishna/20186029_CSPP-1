@@ -37,7 +37,7 @@ def create_social_network(List):
     for i in range(0,len(List), 2):
         if List[i] not in d:
             d[List[i]] = List[i+2].split(',')
-        i += 2
+        
     return d
 
 def main():
