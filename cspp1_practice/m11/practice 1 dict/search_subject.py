@@ -1,10 +1,17 @@
 d = {}
 def create_dict(List):
-    for i in range(0,len(List), 3):
+    for i in range(0,len(List), 2):
         if List[i] not in d:
             d[List[i]] = List[i+1].split(',')
     return d
- 
+
+def search_subject(str_subject):
+    l = []
+    for i in d:
+        if str_subject in d[i]:
+            l.append(i)
+    return l
+  
 def main():
     n = int(input())
     L = []
@@ -15,4 +22,4 @@ def main():
 
 
 d = main()
-print(d)
+print(search_subject("c3"))
