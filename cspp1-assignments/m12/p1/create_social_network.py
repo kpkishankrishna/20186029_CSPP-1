@@ -36,7 +36,7 @@ def create_social_network(List):
     d = {}
     for i in range(0,len(List), 2):
         if List[i] not in d:
-            d[List[i]] = List[i+1].split(',')
+            d[List[i]] = List[i+2].split(',')
     return d
 
 def main():
@@ -50,8 +50,7 @@ def main():
         L.extend(inp_l)
 
 
-    print(L)
-
+    
     print(create_social_network(L))
 
 if __name__ == "__main__":
