@@ -21,7 +21,7 @@ additional check for this condition.
 Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate tests in test_ps4a.py before pasting your function definition here.
 '''
 
-def isValidWord(word, hand, word_list):
+def is_validWord(word, hand, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -51,7 +51,7 @@ def main():
         l_1 = data.split()
         adict_1[l_1[0]]=int(l_1[1])
     l_2 = input().split()
-    print(isValidWord(word_1, adict_1, l_2))
+    print(is_validWord(word_1, adict_1, l_2))
 
 
 
