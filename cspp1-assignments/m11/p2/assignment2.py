@@ -1,6 +1,10 @@
+'''
 #Exercise: Assignment-2
-#Implement the updateHand function. Make sure this function has no side effects: i.e., it must not mutate the hand passed in. Before pasting your function definition here, be sure you've passed the appropriate tests in test_ps4a.py.
-
+#Implement the updateHand function. Make sure this function
+# has no side effects: i.e., it must not mutate the hand passed in.
+# Before pasting your function definition here, be sure you've
+# passed the appropriate tests in test_ps4a.py.
+'''
 
 def updateHand(hand, word):
     """
@@ -29,14 +33,15 @@ def main():
     '''
     main function
     '''
-    n = input()
-    adict = {}
-    for i in range(int(n)):
+    n_1 = input()
+    adict_1 = {}
+    for i in range(int(n_1)):
+        del i
         data = input()
-        l = data.split()
-        adict[l[0]] = int(l[1])
+        l_1 = data.split()
+        adict[l_1[0]] = int(l_1[1])
     data1 = input()
-    print(updateHand(adict,data1))
+    print(updateHand(adict_1, data1))
 
 
 
