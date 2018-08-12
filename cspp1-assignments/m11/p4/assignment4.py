@@ -21,7 +21,7 @@ def main():
     for i in range(int(n_1)):
         data=input()
         l_1 = data.split()
-        adict[l_1[0]] = int(l_1[1])
+        adict_1[l_1[0]] = int(l_1[1])
     print(calculate_handlen(adict_1))
         
 
