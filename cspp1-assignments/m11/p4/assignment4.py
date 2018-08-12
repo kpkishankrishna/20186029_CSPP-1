@@ -10,18 +10,21 @@ def calculateHandlen(hand):
     returns: integer
     """
     # TO DO... <-- Remove this comment when you code this function
-    return len(hand)
+    sum_1 = 0
+    for i in hand:
+        sum_1 += hand[i]
+    return sum_1
 
 def main():
-	n=input()
-	adict={}
-	for i in range(int(n)):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	print(calculateHandlen(adict))
-		
+    n_1 = input()
+    adict_1 = {}
+    for i in range(int(n_1)):
+        data=input()
+        l_1 = data.split()
+        adict[l_1[0]] = int(l_1[1])
+    print(calculate_handlen(adict_1))
+        
 
 
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()
