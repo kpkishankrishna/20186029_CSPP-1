@@ -34,7 +34,7 @@ def isValidWord(word, hand, wordList):
     """
     # TO DO ... <-- Remove this comment when you code this function
     count_1 = 0
-    if word in wordList:
+    if word in word_list:
         for i in word:
             if i in hand:
                 count_1 += 1
@@ -46,11 +46,12 @@ def main():
     n_1 = int(input())
     adict_1={}
     for i in range(n_1):
+        del i
         data = input()
-        l = data.split()
+        l_1 = data.split()
         adict_1[l[0]]=int(l[1])
-    l2=input().split()
-    print(isValidWord(word_1, adict_1, l2))
+    l_2 = input().split()
+    print(isValidWord(word_1, adict_1, l_2))
 
 
 
