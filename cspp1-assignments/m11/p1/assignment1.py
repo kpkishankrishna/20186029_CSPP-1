@@ -33,6 +33,7 @@ def get_word_score(word, n):
     count_1 = count_1*len(word)
     if len(word) == n:
     	count_1 += 50
+	return count_1
 
 
 def main():
