@@ -49,7 +49,7 @@ def main():
         del i
         data = input()
         l_1 = data.split()
-        adict_1[l[0]]=int(l[1])
+        adict_1[l_1[0]]=int(l_1[1])
     l_2 = input().split()
     print(isValidWord(word_1, adict_1, l_2))
 
