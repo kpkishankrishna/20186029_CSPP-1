@@ -35,24 +35,24 @@ def isValidWord(word, hand, wordList):
     # TO DO ... <-- Remove this comment when you code this function
     count_1 = 0
     if word in wordList:
-    	for i in word:
-    		if i in hand:
-    			count_1 += 1
-	return count_1 == len(word)
+        for i in word:
+            if i in hand:
+                count_1 += 1
+    return count_1 == len(word)
 
 
 def main():
-	word=input()
-	n=int(input())
-	adict={}
-	for i in range(n):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	l2=input().split()
-	print(isValidWord(word,adict,l2))
-		
+    word_1 = input()
+    n_1 = int(input())
+    adict_1={}
+    for i in range(n_1):
+        data = input()
+        l = data.split()
+        adict_1[l[0]]=int(l[1])
+    l2=input().split()
+    print(isValidWord(word_1, adict_1, l2))
+
 
 
 if __name__== "__main__":
-	main()
+    main()
