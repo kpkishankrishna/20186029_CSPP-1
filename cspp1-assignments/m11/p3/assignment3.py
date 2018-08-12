@@ -42,6 +42,9 @@ def is_validword(word, hand, word_list):
 
 
 def main():
+    '''
+    main function
+    '''
     word_1 = input()
     n_1 = int(input())
     adict_1 = {}
