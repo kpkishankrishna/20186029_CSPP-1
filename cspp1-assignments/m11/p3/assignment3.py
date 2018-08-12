@@ -18,7 +18,9 @@ the empty string ('') is not a valid word - if you
 code this function correctly, you shouldn't need an
 additional check for this condition.
 
-Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate tests in test_ps4a.py before pasting your function definition here.
+Fill in the code for isValidWord in ps4a.py and be sure
+you've passed the appropriate tests in test_ps4a.py before
+pasting your function definition here.
 '''
 
 def is_validword(word, hand, word_list):
@@ -27,7 +29,7 @@ def is_validword(word, hand, word_list):
     composed of letters in the hand. Otherwise, returns False.
 
     Does not mutate hand or wordList.
-   
+
     word: string
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
