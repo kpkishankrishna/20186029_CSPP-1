@@ -9,9 +9,9 @@
 '''
 
 def calculate_handlen(hand):
-    """ 
+    """
     Returns the length (number of letters) in the current hand.
-    
+
     hand: dictionary (string int)
     returns: integer
     """
@@ -34,7 +34,7 @@ def main():
         l_1 = data.split()
         adict_1[l_1[0]] = int(l_1[1])
     print(calculate_handlen(adict_1))
-        
+
 
 
 if __name__ == "__main__":
