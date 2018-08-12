@@ -44,12 +44,12 @@ def is_validWord(word, hand, word_list):
 def main():
     word_1 = input()
     n_1 = int(input())
-    adict_1={}
+    adict_1 = {}
     for i in range(n_1):
         del i
         data = input()
         l_1 = data.split()
-        adict_1[l_1[0]]=int(l_1[1])
+        adict_1[l_1[0]] = int(l_1[1])
     l_2 = input().split()
     print(is_validWord(word_1, adict_1, l_2))
 
