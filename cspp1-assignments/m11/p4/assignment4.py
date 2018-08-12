@@ -9,7 +9,8 @@ def calculate_handlen(hand):
     hand: dictionary (string int)
     returns: integer
     """
-    # TO DO... <-- Remove this comment when you code this function
+    # TO DO... <-- Remove this comment when you code this
+    # function
     sum_1 = 0
     for i in hand:
         sum_1 += hand[i]
