@@ -20,6 +20,7 @@ def main():
     n_1 = input()
     adict_1 = {}
     for i in range(int(n_1)):
+        del i
         data = input()
         l_1 = data.split()
         adict_1[l_1[0]] = int(l_1[1])
