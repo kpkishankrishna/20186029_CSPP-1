@@ -29,11 +29,11 @@ def get_word_score(word, n):
     # TO DO ... <-- Remove this comment when you code this function
     count_1 = 0
     for i in word:
-    	count_1 += SCRABBLE_LETTER_VALUES[i]
+        count_1 += SCRABBLE_LETTER_VALUES[i]
     count_1 = count_1*len(word)
     if len(word) == n:
-    	count_1 += 50
-	return count_1
+        count_1 += 50
+    return count_1
 
 
 def main():
