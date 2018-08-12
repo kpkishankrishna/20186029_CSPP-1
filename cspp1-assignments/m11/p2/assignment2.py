@@ -39,7 +39,7 @@ def main():
         del i
         data = input()
         l_1 = data.split()
-        adict[l_1[0]] = int(l_1[1])
+        adict_1[l_1[0]] = int(l_1[1])
     data1 = input()
     print(updateHand(adict_1, data1))
 
