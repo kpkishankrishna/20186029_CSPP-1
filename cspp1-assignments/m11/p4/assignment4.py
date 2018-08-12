@@ -17,6 +17,9 @@ def calculate_handlen(hand):
     return sum_1
 
 def main():
+    '''
+    main function
+    '''
     n_1 = input()
     adict_1 = {}
     for i in range(int(n_1)):
