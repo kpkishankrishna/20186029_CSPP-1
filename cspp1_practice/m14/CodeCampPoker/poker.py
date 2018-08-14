@@ -18,7 +18,7 @@ def is_straight(hand):
     lis_suit = []
     for i in hand:
         list_1.append(dict_face[i[0]])
-    
+
     list_1.sort()
     print(list_1)
     for i in range(0, len(list_1)-1):
@@ -99,7 +99,7 @@ def poker(hands):
 
         Output: Return the winning poker hand
     '''
-    
+
     # the line below may be new to you
     # max function is provided by python library
     # learn how it works, in particular the key argument, from the link
@@ -120,4 +120,3 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-    
