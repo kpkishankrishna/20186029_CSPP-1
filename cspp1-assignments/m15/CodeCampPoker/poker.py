@@ -5,12 +5,18 @@
 '''
 dict_face = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def face_values(hand):
+    '''
+    face
+    '''
     face_values = []
     for i_1 in hand:
         face_values.append(dict_face[i_1[0]])
     face_values.sort()
     return face_values
 def suit_values(hand):
+    '''
+    suit
+    '''
     suit_values = []
     #suit_values = [s for f,s in hand]
     for i_1 in hand:
@@ -69,6 +75,9 @@ def is_flush(hand):
 
 
 def four_of_kind(hand):
+    '''
+    four
+    '''
     while len(set(face_values(hand))) == 2:
         a_1 = face_values(hand)
         a_1.sort()
@@ -89,6 +98,9 @@ def four_of_kind(hand):
 
 
 def three_of_kind(hand):
+    '''
+    three
+    '''
     return len(set(face_values(hand))) == 3
 
 
