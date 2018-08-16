@@ -12,7 +12,9 @@ def face_values(hand):
     return face_values
 def suit_values(hand):
     suit_values = []
-    suit_values = [s for f,s in hand]
+    #suit_values = [s for f,s in hand]
+    for i in hand:
+        suit_values.append(i[1])
     return suit_values
 def is_straight(hand):
     '''
