@@ -62,8 +62,8 @@ def is_flush(hand):
         return 2
     '''
     
-    for s in suit_values(hand):
-        if s[0] != s[s]:
+    for i in suit_values(hand):
+        if s[0] != s[i]:
             return False
     return True
 def five_of_kind(hand):
