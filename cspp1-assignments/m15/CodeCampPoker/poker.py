@@ -71,7 +71,7 @@ def is_flush(hand):
 def four_of_kind(hand):
     while len(set(face_values(hand))) == 2:
         a_1 = face_values(hand)
-        a.sort()
+        a_1.sort()
         b_1 = []
         c_1 = []
         for i in a_1:
