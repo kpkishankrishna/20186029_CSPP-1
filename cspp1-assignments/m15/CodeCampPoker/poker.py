@@ -70,18 +70,18 @@ def is_flush(hand):
 
 def four_of_kind(hand):
     while len(set(face_values(hand))) == 2:
-        a= face_values(hand)
+        a_1 = face_values(hand)
         a.sort()
-        b=[]
-        c=[]
-        for i in a:
-            if a[0] == i:
-                b.append(i)
+        b_1 = []
+        c_1 = []
+        for i in a_1:
+            if a_1[0] == i:
+                b_1.append(i)
             else:
-                c.append(i)
-        if len(b) == 4 and len(c) == 1:
+                c_1.append(i)
+        if len(b_1) == 4 and len(c_1) == 1:
             return True
-        elif len(b) == 1 and len(c) == 4:
+        elif len(b_1) == 1 and len(c_1) == 4:
             return True
         else:
             return False 
