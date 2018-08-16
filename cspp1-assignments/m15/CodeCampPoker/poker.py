@@ -6,15 +6,15 @@
 dict_face = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
 def face_values(hand):
     face_values = []
-    for i in hand:
-        face_values.append(dict_face[i[0]])
+    for i_1 in hand:
+        face_values.append(dict_face[i_1[0]])
     face_values.sort()
     return face_values
 def suit_values(hand):
     suit_values = []
     #suit_values = [s for f,s in hand]
-    for i in hand:
-        suit_values.append(i[1])
+    for i_1 in hand:
+        suit_values.append(i_1[1])
     return suit_values
 def is_straight(hand):
     '''
@@ -38,9 +38,9 @@ def is_straight(hand):
             return False
     return True
     '''
-    if all([True if c in '2345A' else False for c,s in hand]):
+    if all([True if c_1 in '2345A' else False for c_1,s_1 in hand]):
         return True
-    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    card_values = set(['--23456789TJQKA'.index(c_1) for c_1, s_1 in hand])
     return len(card_values) == 5 and (max(card_values) - min(card_values) == 4)
 
 def is_flush(hand):
