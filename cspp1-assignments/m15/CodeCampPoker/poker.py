@@ -74,22 +74,22 @@ def five_of_kind(hand):
 
 
 def four_of_kind(hand):
-    while len(set(face_values(hand))) == 2:
-        a= face_values(hand)
-        a.sort()
-        b=[]
-        c=[]
-        for i in a:
-            if a[0] == i:
-                b.append(i)
-            else:
-                c.append(i)
-        if len(b) == 4 and len(c) == 1:
-            return True
-        elif len(b) == 1 and len(c) == 4:
-            return True
+    #while len(set(face_values(hand))) == 2:
+    a= face_values(hand)
+    a.sort()
+    b=[]
+    c=[]
+    for i in a:
+        if a[0] == i:
+            b.append(i)
         else:
-            return False 
+            c.append(i)
+    if len(b) == 4 and len(c) == 1:
+        return True
+    elif len(b) == 1 and len(c) == 4:
+        return True
+    else:
+        return False 
 
      
 
