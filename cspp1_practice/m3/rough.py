@@ -6,4 +6,4 @@ def face_values(hand):
         face_values.append(dict_face[i[0]])
     return face_values
  '''
-print(len(set([1, 1, 1, 1, 2])))
+print(len(set([1, 1, 1, 1, 2])) == 2)
