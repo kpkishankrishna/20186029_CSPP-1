@@ -65,8 +65,6 @@ def is_flush(hand):
     '''
     return len(set([s for f,s in hand])) == 1
 
-def five_of_kind(hand):
-    pass
 
 
 
@@ -88,7 +86,7 @@ def four_of_kind(hand):
         else:
             return False 
 
-     
+
 
 def three_of_kind(hand):
     return len(set(face_values(hand))) == 3
@@ -188,7 +186,7 @@ def poker(hands):
                 return max(hands, key=hand_rank)
             else:
                 return max
-    '''            
+    '''
     return max(hands, key=hand_rank)
 if __name__ == "__main__":
     # read the number of test cases
