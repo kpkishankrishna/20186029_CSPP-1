@@ -92,10 +92,15 @@ def full_house(hand):
     c=[]
     for i in a:
         if a[0] == i:
-            b.append[i]
+            b.append(i)
         else:
-            c.append[i]
-    print(b,c)
+            c.append(i)
+    if len(b) == 2 and len(c) == 3:
+        return True
+    elif len(b) == 3 and len(c) == 2:
+        return True
+    else:
+        return False
 
 
 def hand_rank(hand):

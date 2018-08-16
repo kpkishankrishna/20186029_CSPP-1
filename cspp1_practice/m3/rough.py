@@ -1,9 +1,16 @@
-'''
-dict_face = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
-def face_values(hand):
-    face_values = []
-    for i in hand:
-        face_values.append(dict_face[i[0]])
-    return face_values
- '''
-print(len(set([1, 1, 1, 1, 2])) == 2)
+a = [3, 2, 3, 2, 3]
+a.sort()
+b=[]
+c=[]
+for i in a:
+    if a[0] == i:
+        b.append(i)
+    else:
+        c.append(i)
+print(b,c)
+if len(b) == 2 and len(c) == 3:
+    print(True)
+elif len(b) == 3 and len(c) == 2:
+    print(True)
+else:
+    print(False)
