@@ -97,7 +97,7 @@ def three_of_kind(hand):
 
 def two_of_kind(hand):
     return len(set(face_values(hand))) == 4
-
+'''
 def full_house(hand):
     a= face_values(hand)
     a.sort()
@@ -114,7 +114,7 @@ def full_house(hand):
         return True
     else:
         return False
-
+'''
 
 def hand_rank(hand):
     '''
@@ -141,19 +141,21 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-        return 6
+        return 10
     elif is_flush(hand):
-        return 4
+        return 9
+    elif three_of_kind(hand) and two_of_kind(hand):
+        return 8
     elif is_straight(hand):
-        return 3
+        return 7
     elif four_of_kind(hand):
-        return 5
+        return 6
     elif three_of_kind(hand):
-        return 2
+        return 5
     elif two_of_kind(hand):
-        return 1
+        return 4
     else:
-        return 0
+        return 3
 
 def poker(hands):
     '''
