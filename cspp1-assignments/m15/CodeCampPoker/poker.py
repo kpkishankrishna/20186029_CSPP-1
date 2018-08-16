@@ -81,7 +81,7 @@ def three_of_kind(hand):
 
 
 def two_of_kind(hand):
-    return len(set([face_values(hand)])) == 4:
+    return len(set([face_values(hand)])) == 4
 
 
 def hand_rank(hand):
