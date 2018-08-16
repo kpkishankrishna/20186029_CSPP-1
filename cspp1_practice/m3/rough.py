@@ -1,1 +1,2 @@
-print(max([[1, 2, 3, 4], [2, 3, 4, 5]]))
+hand = ['1s', '1d', '1s', '1s']
+print(len(set([s for f,s in hand])) == 1)

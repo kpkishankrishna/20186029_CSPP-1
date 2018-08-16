@@ -63,11 +63,8 @@ def is_flush(hand):
     else:
         return 2
     '''
-    s_1 = hand[0]
-    for i in hand:
-        if s_1[1] != i[1]:
-            return False
-    return True
+    return len(set([s for f,s in hand])) == 1
+
 def five_of_kind(hand):
     pass
 
@@ -176,8 +173,14 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
+    '''for i in key:
+        for j in key:
+            if key[j] != key[i]:
+                return max(hands, key=hand_rank)
+            else:
+                return max
+    '''            
     return max(hands, key=hand_rank)
-
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
