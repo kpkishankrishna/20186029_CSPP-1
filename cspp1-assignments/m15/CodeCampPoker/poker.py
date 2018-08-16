@@ -74,7 +74,8 @@ def five_of_kind(hand):
 
 
 def four_of_kind(hand):
-    #return len(set(face_values(hand))) == 2
+    return len(set(face_values(hand))) == 2
+    '''
     a= face_values(hand)
     a.sort()
     b=[]
@@ -89,7 +90,9 @@ def four_of_kind(hand):
     elif len(b) == 1 and len(c) == 4:
         return True
     else:
-        return False   
+        return False 
+
+    '''  
 
 def three_of_kind(hand):
     return len(set(face_values(hand))) == 3
