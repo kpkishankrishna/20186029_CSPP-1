@@ -72,16 +72,16 @@ def five_of_kind(hand):
 
 
 def four_of_kind(hand):
-    return set([face_values(hand)]) == 2:
+    return set([face_values(hand)]) == 2
         
 
 def three_of_kind(hand):
-    return set([face_values(hand)]) == 3:
+    return set([face_values(hand)]) == 3
 
 
 
 def two_of-kind(hand):
-    return set([face_values(hand)]) == 4:
+    return set([face_values(hand)]) == 4
 
 
 
