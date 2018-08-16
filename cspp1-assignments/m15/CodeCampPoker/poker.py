@@ -115,7 +115,11 @@ def full_house(hand):
     else:
         return False
 '''
-
+def high_card:
+    temp = 0
+    if temp < max(face_values(hand)):
+        temp = max(face_values(hand))
+    return temp
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -141,21 +145,21 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-        return 10
+        return 100
     elif is_flush(hand):
-        return 9
+        return 99
     elif three_of_kind(hand) and two_of_kind(hand):
-        return 8
+        return 98
     elif is_straight(hand):
-        return 7
+        return 97
     elif four_of_kind(hand):
-        return 6
+        return 96
     elif three_of_kind(hand):
-        return 5
+        return 95
     elif two_of_kind(hand):
-        return 4
+        return 94
     else:
-        return 3
+        return temp
 
 def poker(hands):
     '''
