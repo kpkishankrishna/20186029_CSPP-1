@@ -9,6 +9,7 @@ def face_values(hand):
     for i in hand:
         face_values.append(dict_face[i[0]])
     face_values.sort()
+    print(face_values)
     return face_values
 def suit_values(hand):
     suit_values = []
@@ -74,7 +75,6 @@ def five_of_kind(hand):
 
 
 def four_of_kind(hand):
-    print(hand)
     return print(len(set([face_values(hand)]))) == 2
         
 
