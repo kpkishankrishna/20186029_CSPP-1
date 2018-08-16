@@ -115,7 +115,7 @@ def full_house(hand):
     else:
         return False
 '''
-def high_card:
+def high_card(hand):
     temp = 0
     if temp < max(face_values(hand)):
         temp = max(face_values(hand))
