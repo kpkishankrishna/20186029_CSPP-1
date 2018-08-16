@@ -12,7 +12,9 @@ def face_values(hand):
     return face_values
 def suit_values(hand):
     suit_values = []
-    suit_values = [s for f,s in hand]
+    #suit_values = [s for f,s in hand]
+    for i in hand:
+        suit_values.append(i[1])
     return suit_values
 def is_straight(hand):
     '''
@@ -61,28 +63,57 @@ def is_flush(hand):
     else:
         return 2
     '''
-    
-    for s in suit_values(hand):
-        if s[0] != s[s]:
-            return False
-    return True
+    return len(set([s for f,s in hand])) == 1
+
 def five_of_kind(hand):
     pass
 
 
 
 def four_of_kind(hand):
-    return set([face_values(hand)]) == 2
-        
+    #while len(set(face_values(hand))) == 2:
+    a= face_values(hand)
+    a.sort()
+    b=[]
+    c=[]
+    for i in a:
+        if a[0] == i:
+            b.append(i)
+        else:
+            c.append(i)
+    if len(b) == 4 and len(c) == 1:
+        return True
+    elif len(b) == 1 and len(c) == 4:
+        return True
+    else:
+        return False 
+
+     
 
 def three_of_kind(hand):
-    return set([face_values(hand)]) == 3
+    return len(set(face_values(hand))) == 3
 
 
 
-def two_of-kind(hand):
-    return set([face_values(hand)]) == 4
+def two_of_kind(hand):
+    return len(set(face_values(hand))) == 4
 
+def full_house(hand):
+    a= face_values(hand)
+    a.sort()
+    b=[]
+    c=[]
+    for i in a:
+        if a[0] == i:
+            b.append(i)
+        else:
+            c.append(i)
+    if len(b) == 2 and len(c) == 3:
+        return True
+    elif len(b) == 3 and len(c) == 2:
+        return True
+    else:
+        return False
 
 
 def hand_rank(hand):
@@ -110,12 +141,19 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-        return 3
+        return 6
     elif is_flush(hand):
-        return 2
+        return 4
     elif is_straight(hand):
+        return 3
+    elif four_of_kind(hand):
+        return 5
+    elif three_of_kind(hand):
+        return 2
+    elif two_of_kind(hand):
         return 1
-    return 0
+    else:
+        return 0
 
 def poker(hands):
     '''
@@ -135,8 +173,14 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
+    '''for i in key:
+        for j in key:
+            if key[j] != key[i]:
+                return max(hands, key=hand_rank)
+            else:
+                return max
+    '''            
     return max(hands, key=hand_rank)
-
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
