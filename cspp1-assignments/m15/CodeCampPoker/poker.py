@@ -75,7 +75,6 @@ def five_of_kind(hand):
 
 def four_of_kind(hand):
     while len(set(face_values(hand))) == 2:
-            
         a= face_values(hand)
         a.sort()
         b=[]
