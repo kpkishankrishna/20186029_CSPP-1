@@ -85,6 +85,17 @@ def three_of_kind(hand):
 def two_of_kind(hand):
     return len(set(face_values(hand))) == 4
 
+def full_house(hand):
+    a= face_values(hand)
+    a.sort()
+    b=[]
+    c=[]
+    for i in a:
+        if a[0] == i:
+            b.append[i]
+        else:
+            c.append[i]
+    print(a,b)
 
 def hand_rank(hand):
     '''
