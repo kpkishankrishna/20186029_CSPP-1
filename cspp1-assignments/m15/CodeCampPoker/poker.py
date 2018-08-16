@@ -95,7 +95,8 @@ def full_house(hand):
             b.append[i]
         else:
             c.append[i]
-    print(a,b)
+    print(b,c)
+
 
 def hand_rank(hand):
     '''
