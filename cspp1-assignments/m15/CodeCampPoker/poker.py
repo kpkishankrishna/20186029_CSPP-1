@@ -74,7 +74,8 @@ def five_of_kind(hand):
 
 
 def four_of_kind(hand):
-    return len(set([face_values(hand)])) == 2
+    print(hand)
+    return print(len(set([face_values(hand)]))) == 2
         
 
 def three_of_kind(hand):
