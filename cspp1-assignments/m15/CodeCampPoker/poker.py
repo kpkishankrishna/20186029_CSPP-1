@@ -80,7 +80,7 @@ def three_of_kind(hand):
 
 
 
-def two_of-kind(hand):
+def two_of_kind(hand):
     return len(set([face_values(hand)])) == 4:
 
 
@@ -118,7 +118,7 @@ def hand_rank(hand):
         return 5
     elif three_of_kind(hand):
         return 2
-    elif two_of-kind(hand):
+    elif two_of_kind(hand):
         return 1
     else:
         return 0
