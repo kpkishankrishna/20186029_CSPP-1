@@ -160,6 +160,8 @@ def hand_rank(hand):
     elif two_of_kind(hand):
         return 94
     else:
+        if temp < high_card(hand):
+            temp = high_card(hand)
         return temp
 
 def poker(hands):
