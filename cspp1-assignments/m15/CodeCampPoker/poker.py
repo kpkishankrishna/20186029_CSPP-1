@@ -72,17 +72,16 @@ def five_of_kind(hand):
 
 
 def four_of_kind(hand):
-    return set([face_values(hand)]) == 2:
+    return len(set([face_values(hand)])) == 2
         
 
 def three_of_kind(hand):
-    return set([face_values(hand)]) == 3:
+    return len(set([face_values(hand)])) == 3
 
 
 
 def two_of-kind(hand):
-    return set([face_values(hand)]) == 4:
-
+    return len(set([face_values(hand)])) == 4:
 
 
 def hand_rank(hand):
@@ -119,8 +118,10 @@ def hand_rank(hand):
         return 5
     elif three_of_kind(hand):
         return 2
-    else:
+    elif two_of-kind(hand):
         return 1
+    else:
+        return 0
 
 def poker(hands):
     '''
