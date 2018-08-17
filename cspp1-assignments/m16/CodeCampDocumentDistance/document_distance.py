@@ -23,15 +23,15 @@ def create_dict(words_list):
 def combine_dictionary(dict1, dict2):
     dictionary = {}
     for word in dict1, dict2:
-        if word in dictionary_two:
-            dictionary[word] = [dictionary_one[word], dictionary_two[word]]
+        if word in dict2:
+            dictionary[word] = [dict1[word], dict2[word]]
 
-    for word in dictionary_one:
+    for word in dict1:
         if word not in dictionary:
-            dictionary[word] = [dictionary_one[word], 0]
-    for word in dictionary_two:
+            dictionary[word] = [dict1[word], 0]
+    for word in dict2:
         if word not in dictionary:
-            dictionary[word] = [0, dictionary_two[word]]
+            dictionary[word] = [0, dict2[word]]
     return dictionary
 
 def calculate_similarity(dict_values):
