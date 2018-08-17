@@ -5,12 +5,12 @@ import string
 import re
 import math
 def clean_text(text_input):
-	words = text_input.lower().strip()
-	regex = re.compile('[^a-z]')
-	words = regex.sub("", words).split(" ")
-	return words
+    words = text_input.lower().strip()
+    regex = re.compile('[^a-z]')
+    words = regex.sub("", words).split(" ")
+    return words
 def create_dict(words_list):
-	dictionary = {}
+    dictionary = {}
     stopwords = load_stopwords("stopwords.txt")
     for word in words_list:
         word = word.strip()
@@ -21,7 +21,7 @@ def create_dict(words_list):
                 dictionary[word] += 1
     return dictionary
 def combine_dictionary(dict1, dict2):
-	dictionary = {}
+    dictionary = {}
     for word in dictionary_one, dictionary_two:
         if word in dictionary_two:
             dictionary[word] = [dictionary_one[word], dictionary_two[word]]
@@ -35,7 +35,7 @@ def combine_dictionary(dict1, dict2):
     return dictionary
 
 def calculate_similarity(dict_values):
-	numerator = sum([k[0] * k[1] for k in dictionary_values()])
+    numerator = sum([k[0] * k[1] for k in dictionary_values()])
     d1_a = math.sqrt(sum([k[0] ** 2 for k in dictionary_values()]))
     d2_a = math.sqrt(sum([k[1] ** 2 for k in dictionary_values()]))
     return numerator/(d1_a*d2_a)
