@@ -61,7 +61,7 @@ def similarity(string1, string2):
     return calculate_similarity(dict_similarity)
 
 
-def load_stopwords(filename):
+def load_stopwords(file_na):
     '''
         loads stop words from a file and returns a dictionary
     '''
