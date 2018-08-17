@@ -22,7 +22,7 @@ def create_dict(words_list):
     return dictionary
 def combine_dictionary(dict1, dict2):
     dictionary = {}
-    for word in dictionary_one, dictionary_two:
+    for word in dict1, dict2:
         if word in dictionary_two:
             dictionary[word] = [dictionary_one[word], dictionary_two[word]]
 
