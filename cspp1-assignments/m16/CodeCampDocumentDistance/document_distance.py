@@ -49,7 +49,7 @@ def similarity(dict1, dict2):
     '''
     dictionary_one = clean_text(dict1)
     dictionary_two = clean_text(dict2)
-    dictionary = combine_dictionaries(dictionary_one, dictionary_two)
+    dictionary = combine_dictionary(dictionary_one, dictionary_two)
     return calculate_similarity(dictionary)
     
 
