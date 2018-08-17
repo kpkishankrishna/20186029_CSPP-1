@@ -23,8 +23,9 @@ def create_dict(words_list):
 def combine_dictionary(dict1, dict2):
     dictionary = {}
     for word in dict1:
-        if word not in dict2:
-            dictionary[word] = [dict1[word], dict2[word]]
+        if word in dict2:
+            if word not in dictionary:
+                dictionary[word] = [dict1[word], dict2[word]]
 
     for word in dict1:
         if word not in dictionary:
