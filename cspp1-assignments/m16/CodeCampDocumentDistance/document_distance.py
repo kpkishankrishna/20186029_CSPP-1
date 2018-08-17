@@ -3,30 +3,30 @@
 '''
 import re
 import math
-def combine_dictionary(dict_one, dict_two):
+def combine_dictionary(dict_1, dict_2):
     '''input: two dictionary and output: combine dictionary with value as list
     '''
-    dict_combine = {}
-    for word in dict_one:
-        if word in dict_two:
-            if word not in dict_combine:
-                dict_combine[word] = [dict_one[word], dict_two[word]]
+    dictionary = {}
+    for word in dict_1:
+        if word in dict_2:
+            if word not in dictionary:
+                dictionary[word] = [dict_1[word], dict_2[word]]
 
-    for word in dict_one:
-        if word not in dict_combine:
-            dict_combine[word] = [dict_one[word], 0]
-    for word in dict_two:
-        if word not in dict_combine:
-            dict_combine[word] = [0, dict_two[word]]
-    return dict_combine
+    for word in dict_1:
+        if word not in dictionary:
+            dictionary[word] = [dict_1[word], 0]
+    for word in dict_2:
+        if word not in dictionary:
+            dictionary[word] = [0, dict_2[word]]
+    return dictionary
 
 def calculate_similarity(dict_cal):
     '''input: combine dictionary and output: value of the dictionary num/denom
     '''
     numerator = sum([key[0] * key[1] for key in dict_cal.values()])
-    d_one = math.sqrt(sum([key[0]**2 for key in dict_cal.values()]))
-    d_two = math.sqrt(sum([key[1]**2 for key in dict_cal.values()]))
-    return numerator/(d_one*d_two)
+    dict_1 = math.sqrt(sum([key[0]**2 for key in dict_cal.values()]))
+    dict_2 = math.sqrt(sum([key[1]**2 for key in dict_cal.values()]))
+    return numerator/(dict_1*dict_2)
 
 def create_dic(words_l):
     '''return dictionary and input as wordlist
@@ -66,8 +66,8 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename1:
-        for line in filename1:
+    with open(file_na, 'r') as file_1:
+        for line in file_1:
             stopwords[line.strip()] = 0
     return stopwords
 
