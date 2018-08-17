@@ -1,59 +1,64 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
-import string
 import re
 import math
-def clean_text(text_input):
-    words = text_input.lower().strip()
-    regex = re.compile('[^a-z]')
-    words = regex.sub("", words).split(" ")
-    return words
-def create_dict(words_list):
-    dictionary = {}
+def combine_dictionary(dict_one, dict_two):
+    '''input: two dictionary and output: combine dictionary with value as list
+    '''
+    dict_combine = {}
+    for word in dict_one:
+        if word in dict_two:
+            if word not in dict_combine:
+                dict_combine[word] = [dict_one[word], dict_two[word]]
+
+    for word in dict_one:
+        if word not in dict_combine:
+            dict_combine[word] = [dict_one[word], 0]
+    for word in dict_two:
+        if word not in dict_combine:
+            dict_combine[word] = [0, dict_two[word]]
+    return dict_combine
+
+def calculate_similarity(dict_cal):
+    '''input: combine dictionary and output: value of the dictionary num/denom
+    '''
+    numerator = sum([key[0] * key[1] for key in dict_cal.values()])
+    d_one = math.sqrt(sum([key[0]**2 for key in dict_cal.values()]))
+    d_two = math.sqrt(sum([key[1]**2 for key in dict_cal.values()]))
+    return numerator/(d_one*d_two)
+
+def create_dic(words_l):
+    '''return dictionary and input as wordlist
+    '''
+    dict_n = {}
     stopwords = load_stopwords("stopwords.txt")
-    for word in words_list:
+    for word in words_l:
         word = word.strip()
-        if word not in stopwords and words_list.len(word) > 0:
-            if word not in dictionary:
-                dictionary[word] = 1
+        if word not in stopwords and word != '':
+            if word not in dict_n:
+                dict_n[word] = 1
             else:
-                dictionary[word] += 1
-    return dictionary
-def combine_dictionary(dict1, dict2):
-    dictionary = {}
-    for word in dict1:
-        if word in dict2:
-            if word not in dictionary:
-                dictionary[word] = [dict1[word], dict2[word]]
-
-    for word in dict1:
-        if word not in dictionary:
-            dictionary[word] = [dict1[word], 0]
-    for word in dict2:
-        if word not in dictionary:
-            dictionary[word] = [0, dict2[word]]
-    return dictionary
-
-def calculate_similarity(dict_values):
-    numerator = sum([k[0] * k[1] for k in dictionary_values()])
-    d1_a = math.sqrt(sum([k[0] ** 2 for k in dictionary_values()]))
-    d2_a = math.sqrt(sum([k[1] ** 2 for k in dictionary_values()]))
-    return numerator/(d1_a*d2_a)
+                dict_n[word] += 1
+    return dict_n
 
 
+def clean_string(inp_1):
+    '''take string and return list
+    '''
+    words = inp_1.lower().strip().replace('\'', '')
+    regex = re.compile('[^a-z]')
+    words = regex.sub(" ", words).split(" ")
+    return words
 
-
-def similarity(dict1, dict2):
+def similarity(string1, string2):
     '''
         Compute the document distance as given in the PDF
     '''
-    dictionary_one = clean_text(dict1)
-    dictionary_two = clean_text(dict2)
-    dictionary = combine_dictionary(dictionary_one, dictionary_two)
-    return calculate_similarity(dictionary)
-    
-
+    words_list1 = create_dic(clean_string(string1))
+    words_list2 = create_dic(clean_string(string2))
+    dict_similarity = combine_dictionary(words_list1, words_list2)
+    return calculate_similarity(dict_similarity)
 
 
 def load_stopwords(filename):
@@ -61,8 +66,8 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(filename, 'r') as filename1:
+        for line in filename1:
             stopwords[line.strip()] = 0
     return stopwords
 
