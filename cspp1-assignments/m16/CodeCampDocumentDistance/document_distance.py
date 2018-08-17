@@ -47,8 +47,8 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    dictionary_one = clean_given_text(text_1)
-    dictionary_two = clean_given_text(text_2)
+    dictionary_one = clean_text(text_1)
+    dictionary_two = clean_text(text_2)
     dictionary = combine_dictionaries(dictionary_one, dictionary_two)
     return calculate_similarity(dictionary)
     
