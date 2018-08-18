@@ -20,7 +20,7 @@
         .
     }
 '''
-    
+
 
 
 # helper function to load the stop words from a file
@@ -88,7 +88,7 @@ def build_search_index(docs):
     return dictionary
 
 
-    
+
 
 
 # helper function to print the search index
