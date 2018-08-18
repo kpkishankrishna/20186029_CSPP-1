@@ -76,16 +76,16 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    dict_1 = {}
-    STOP_WORD = load_stopwords("stopwords.txt")
+    dictionary = {}
+    stop_word = load_stopwords("stopwords.txt")
     for index, line in enumerate(docs):
-        LIST_ = remove_stopwords(word_list(line), STOP_WORD)
-        for ele in set(LIST_):
-            if ele in dict_1:
-                dict_1[ele].append((index, LIST_.count(ele)))
+        list_of_words = remove_stopwords(word_list(line), stop_word)
+        for word in set(list_of_words):
+            if word in dictionary:
+                dictionary[word].append((index, list_of_words.count(word)))
             else:
-                dict_1[ele] = [(index, LIST_.count(ele))]
-    return dict_1
+                dictionary[word] = [(index, list_of_words.count(word))]
+    return dictionary
 
 
     

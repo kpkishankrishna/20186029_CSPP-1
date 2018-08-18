@@ -13,11 +13,11 @@ def build_search_index(docs):
     STOP_WORD = load_stopwords("stopwords.txt")
     for index, line in enumerate(docs):
         LIST_ = remove_stopwords(word_list(line), STOP_WORD)
-        for word in set(LIST_):
-            if word in dict_1:
-                dict_1[word].append((index, LIST_.count(word)))
+        for ele in set(LIST_):
+            if ele in dict_1:
+                dict_1[ele].append((index, LIST_.count(ele)))
             else:
-                dict_1[word] = [(index, LIST_.count(word))]
+                dict_1[ele] = [(index, LIST_.count(ele))]
     return dict_1
 
 def remove_stopwords(word, STOP_WORD):
