@@ -77,8 +77,9 @@ def build_search_index(docs):
     # return search index
     big_dict = {}
     stop_words = load_stopwords("stopwords.txt")
-    new_dict1 = list_to_dictionaries(new_list1, stop_words)
-    new_dict2 = list_to_dictionaries(new_list2, stop_words)
+    for i in docs:
+        new_dicti = create_dic(doc_i)
+    
     for i in new_dict1:
         if i in new_dict2:
             big_dict[i] = [new_dict1[i], new_dict2[i]]
