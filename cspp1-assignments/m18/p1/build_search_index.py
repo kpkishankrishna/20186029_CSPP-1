@@ -75,9 +75,20 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    dictionary = {}
-    dict_1 = create_dic(word_list())
-    dict_2 = create_dic(word_list())
+    big_dict = {}
+    stop_words = load_stopwords("stopwords.txt")
+    new_dict1 = list_to_dictionaries(new_list1, stop_words)
+    new_dict2 = list_to_dictionaries(new_list2, stop_words)
+    for i in new_dict1:
+        if i in new_dict2:
+            big_dict[i] = [new_dict1[i], new_dict2[i]]
+    for i in new_dict1:
+        if i not in big_dict:
+            big_dict[i] = [new_dict1[i], 0]
+    for i in new_dict2:
+        if i not in big_dict:
+            big_dict[i] = [0, new_dict2[i]]
+    return big_dict
 
     
 
