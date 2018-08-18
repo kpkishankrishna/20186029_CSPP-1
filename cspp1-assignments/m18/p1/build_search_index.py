@@ -79,7 +79,7 @@ def build_search_index(docs):
     dictionary = {}
     stop_word = load_stopwords("stopwords.txt")
     for index, lines_1 in enumerate(docs):
-        if word not in stopwords and word != '':
+        if list_of_words not in stopwords and word != '':
             list_of_words = remove_stopwords(word_list(lines_1), stop_word)
         for word in set(list_of_words):
             if word in dictionary:
