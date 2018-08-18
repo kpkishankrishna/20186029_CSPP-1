@@ -75,27 +75,29 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    big_dict = {}
-    stop_words = load_stopwords("stopwords.txt")
-    for i in docs:
-        i = create_dic(doc_i)
-    
-    for i in new_dict1:
-        if i in new_dict2:
-            big_dict[i] = [new_dict1[i], new_dict2[i]]
-    for i in new_dict1:
-        if i not in big_dict:
-            big_dict[i] = [new_dict1[i], 0]
-    for i in new_dict2:
-        if i not in big_dict:
-            big_dict[i] = [0, new_dict2[i]]
-    return big_dict
+    dict_1 = {}
+    STOP_WORD = load_stopwords("stopwords.txt")
+    for index, line in enumerate(docs):
+        LIST_ = remove_stopwords(word_list(line), STOP_WORD)
+        for ele in set(LIST_):
+            if ele in dict_1:
+                dict_1[ele].append((index, LIST_.count(ele)))
+            else:
+                dict_1[ele] = [(index, LIST_.count(ele))]
+    return dict_1
+
 
     
 
 
 # helper function to print the search index
 # use this to verify how the search index looks
+def remove_stopwords(word, STOP_WORD):
+    LIST_1 = word
+    for w_1 in word:
+        if w_1 in STOP_WORD:
+            LIST_1.remove(w_1)
+    return LIST_1
 def print_search_index(index):
     '''
         print the search index
