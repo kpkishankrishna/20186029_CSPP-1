@@ -94,10 +94,10 @@ def build_search_index(docs):
 
 # helper function to print the search index
 # use this to verify how the search index looks
-def remove_stopwords(word, STOP_WORD):
+def remove_stopwords(word, stop_word):
     list_1 = word
     for w_1 in word:
-        if w_1 in STOP_WORD:
+        if w_1 in stop_word:
             list_1.remove(w_1)
     return list_1
 def print_search_index(index):
