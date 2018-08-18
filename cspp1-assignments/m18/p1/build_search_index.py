@@ -45,19 +45,19 @@ def word_list(text):
     regex = re.compile('[^a-z]')
     words = regex.sub(" ", words).split(" ")
     return words
-def create_dic(words):
-    '''return dictionary and input as wordlist
-    '''
-    dict_n = {}
-    stopwords = load_stopwords("stopwords.txt")
-    for word in words_l:
-        word = word.strip()
-        if word not in stopwords and word != '':
-            if word not in dict_n:
-                dict_n[word] = 1
-            else:
-                dict_n[word] += 1
-    return dict_n
+# def create_dic(words):
+#     '''return dictionary and input as wordlist
+#     '''
+#     dict_n = {}
+#     stopwords = load_stopwords("stopwords.txt")
+#     for word in words_l:
+#         word = word.strip()
+#         if word not in stopwords and word != '':
+#             if word not in dict_n:
+#                 dict_n[word] = 1
+#             else:
+#                 dict_n[word] += 1
+#     return dict_n
 
 def build_search_index(docs):
     '''
@@ -78,7 +78,7 @@ def build_search_index(docs):
     big_dict = {}
     stop_words = load_stopwords("stopwords.txt")
     for i in docs:
-        new_dicti = create_dic(doc_i)
+        i = create_dic(doc_i)
     
     for i in new_dict1:
         if i in new_dict2:
