@@ -42,8 +42,6 @@ def word_list(text):
         return a list of words
     '''
     import re
-    stop_word = load_stopwords("stopwords.txt")
-    words = remove_stopwords(word_list(lines_1), stop_word)
     words = text.lower().strip().replace('\'', '')
     regex = re.compile('[^a-z]')
     words = regex.sub(" ", words).split(" ")
