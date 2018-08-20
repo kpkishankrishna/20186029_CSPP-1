@@ -75,7 +75,7 @@ def build_search_index(documents):
     for document_id, document in enumerate(documents):
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
-        words_document_list = word_list(documents)
+        words_document_list = word_list(document)
         # clean up doc and tokenize to words list
         for word in words_document_list:
             if word not in search_index:
