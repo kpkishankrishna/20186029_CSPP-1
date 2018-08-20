@@ -79,8 +79,8 @@ def build_search_index(docs):
         # clean up doc and tokenize to words list
         for word in words_document_list:
             if word not in search_index:
-                dictionary[word] = []
-                dictionary[word].append((document_id, words_document_list.count(word)))
+                search_index[word] = []
+                search_index[word].append((document_id, words_document_list.count(word)))
             else:
                 if (document_id, words_document_list.count(word)) not in search_index[word]:
                     search_index[word].append(document_id, words_document_list.count(word))
