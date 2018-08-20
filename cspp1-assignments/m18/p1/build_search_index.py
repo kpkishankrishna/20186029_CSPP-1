@@ -48,7 +48,7 @@ def word_list(text):
     # return words
     words = re.sub('[^a-z]'," ", text.lower().replace('\'', "").strip()).split()
     stopwords = load_stopwords("stopwords.txt")
-    words = [word.strip() for word in words if not in stopwords and len(word) >0]
+    words = [word.strip() for word in words if word not in stopwords and len(word) >0]
     return words
 # def create_dic(words):
 #     '''return dictionary and input as wordlist
