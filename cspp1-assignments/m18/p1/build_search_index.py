@@ -64,7 +64,7 @@ def word_list(text):
 #                 dict_n[word] += 1
 #     return dict_n
 
-def build_search_index(docs):
+def build_search_index(documents):
     '''
         Process the docs step by step as given below
     '''
