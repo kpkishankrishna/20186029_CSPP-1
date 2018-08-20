@@ -42,9 +42,13 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    words = text.lower().strip().replace('\'', '')
-    regex = re.compile('[^a-z]')
-    words = regex.sub(" ", words).split(" ")
+    # words = text.lower().strip().replace('\'', '')
+    # regex = re.compile('[^a-z]')
+    # words = regex.sub(" ", words).split(" ")
+    # return words
+    words = re.sub('[^a-z]'," ", text.lower().replace('\'', "").strip()).split()
+    stopwords = load_stopwords("stopwords.txt")
+    words = [word.strip() for word in words if not in stopwords and len(word) >0]
     return words
 # def create_dic(words):
 #     '''return dictionary and input as wordlist
@@ -66,28 +70,37 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-
+    search_index = {}
     # iterate through all the docs
+    for document_id, document in enumerate(documents):
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
-
+        words_document_list = word_list(document)
         # clean up doc and tokenize to words list
+        for word in words_document_list:
+            if word not in search_index:
+                dictionary[word] = []
+                dictionary[word].append((document_id, words_document_list.count(word)))
+            else:
+                if (document_id, words_document_list.count(word)) in search_index[word]:
+                    search_index[word].append((document_id, words_document_list.count(word))
 
         # add or update the words of the doc to the search index
 
     # return search index
-    dictionary = {}
-    stop_word = load_stopwords("stopwords.txt")
-    for index, line in enumerate(docs):
-        if index not in stop_word and index != '':
-            list_of_words = remove_stopwords(word_list(line), stop_word)
-            for word in set(list_of_words):
-                if word in dictionary:
-                    dictionary[word].append((index, list_of_words.count(word)))
-                else:
-                    dictionary[word] = [(index, list_of_words.count(word))]
-    return dictionary
-
+    # dictionary = {}
+    # stop_word = load_stopwords("stopwords.txt")
+    # for index, line in enumerate(docs):
+    #     if index not in stop_word and index != '':
+    #         list_of_words = remove_stopwords(word_list(line), stop_word)
+    #         for word in set(list_of_words):
+    #             if word in dictionary:
+    #                 dictionary[word].append((index, list_of_words.count(word)))
+    #             else:
+    #                 dictionary[word] = [(index, list_of_words.count(word))]
+    # return dictionary
+    
+    
 
 
 
