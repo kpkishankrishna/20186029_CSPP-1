@@ -84,7 +84,7 @@ def build_search_index(documents):
             else:
                 if (document_id, words_document_list.count(word)) not in search_index[word]:
                     search_index[word].append((document_id, words_document_list.count(word)))
-        return search_index
+    return search_index
 
         # add or update the words of the doc to the search index
 
