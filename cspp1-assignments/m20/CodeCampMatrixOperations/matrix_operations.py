@@ -32,7 +32,7 @@ def add_matrix(m1, m2):
     '''
     matrix_1 = []
     rows = len(m1)
-    columns = len(m1[0])
+    columns = len(m2[0])
     if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
         add_matrix = [[0 for i in range(columns)] for j in range(rows)]
         for i in range(rows):
@@ -68,7 +68,11 @@ def read_matrix():
 def main():
     # read matrix 1
     matrix_1 = read_matrix()
+    if matrix_1 is None:
+        exit()
     matrix_2 = read_matrix()
+    if matrix_2 is None:
+        exit()
     print(add_matrix(matrix_1,matrix_2))
     print(mult_matrix(matrix_1, matrix_2))
 
