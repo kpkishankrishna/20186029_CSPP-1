@@ -40,7 +40,7 @@ def add_matrix(m_1, m_2):
                 add_m[i][j] = m_1[i][j] + m_2[i][j]
         return add_m
     print("Error: Matrix shapes invalid for addition")
-    return None  
+    return None
 
 
 def read_matrix():
