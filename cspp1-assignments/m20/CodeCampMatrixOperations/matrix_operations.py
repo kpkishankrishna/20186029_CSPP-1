@@ -102,7 +102,7 @@ def main():
     # print(mat1,mat2)
 
     # add matrix 1 and matrix 2
-    matrix_3 = add_matrix(read_matrix(matrix_1),read_matrix(matrix_2))
+    matrix_3 = add_matrix(matrix_1,matrix_2)
 
     # multiply matrix 1 and matrix 2
     print(matrix_1)
