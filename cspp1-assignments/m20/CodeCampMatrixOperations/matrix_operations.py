@@ -37,27 +37,27 @@ def main():
         mat.append([])
     for i in range(m):
         for j in range(n):
-            mat[i].append(j)
-            mat[i][j]=0
+            mat1[i].append(j)
+            mat1[i][j]=0
     for i in range(m):
         for j in range(n):
             print("enter the rows",i+1,"enter the coulmns", j+1)
-            mat[i][j] = int(input())
+            mat1[i][j] = int(input())
 
     # read matrix 2
     m= int(input('rows'))
     n = int(input('columns'))
     mat2 =[]
     for i in range(m):
-        mat.append([])
+        mat2.append([])
     for i in range(m):
         for j in range(n):
-            mat[i].append(j)
-            mat[i][j]=0
+            mat2[i].append(j)
+            mat2[i][j]=0
     for i in range(m):
         for j in range(n):
             print("enter the rows",i+1,"enter the coulmns", j+1)
-            mat[i][j] = int(input())
+            mat2[i][j] = int(input())
     print(mat1,mat2)
 
     # add matrix 1 and matrix 2
