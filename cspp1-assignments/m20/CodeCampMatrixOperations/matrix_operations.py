@@ -24,12 +24,11 @@ def add_matrix(m1, m2):
     rows = len(m1)
     columns = len(m1[0])
     add_matrix = [[0]*columns]*rows
-    for i in range(rows-1):
-        for j in range(columns-1):
-            print("-----------",str(add_matrix[i][j]))
+    for i in range(rows):
+        for j in range(columns):
+            # print("-----------",str(add_matrix[i][j]))
+            print("i",str(i),"j",str(j),add_matrix[i][j])
             add_matrix[i][j] = m1[i][j]+m2[i][j]
-            # print("i",str(i),"j",str(j),add_matrix[i][j])
-            print(add_matrix)
     return add_matrix
 
 def read_matrix():
