@@ -1,4 +1,4 @@
-def mult_matrix(m1, m2):
+def mult_matrix(m_1, m_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -6,12 +6,12 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    add_m = re_mat(len(m1), len(m2[0]))
-    if len(m1[0]) == len(m2):
-        for i in range(len(m1)):
-            for j in range(len(m2[0])):
-                for k in range(len(m2)):
-                    add_m[i][j] += m1[i][k] * m2[k][j]
+    add_m = re_mat(len(m_1), len(m_2[0]))
+    if len(m_1[0]) == len(m_2):
+        for i in range(len(m_1)):
+            for j in range(len(m_2[0])):
+                for k in range(len(m_2)):
+                    add_m[i][j] += m_1[i][k] * m_2[k][j]
         return add_m
     print("Error: Matrix shapes invalid for mult")
     return None
@@ -24,7 +24,7 @@ def re_mat(rows, columns):
     return multi_matrix
                  
 
-def add_matrix(m1, m2):
+def add_matrix(m_1, m_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -33,11 +33,11 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     
-    add_m = re_mat(len(m1), len(m2[0]))
-    if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
-        for i in range(len(m1)):
-            for j in range(len(m1[0])):
-                add_m[i][j] = m1[i][j] + m2[i][j]
+    add_m = re_mat(len(m_1), len(m_2[0]))
+    if len(m_1) == len(m_2) and len(m_1[0]) == len(m_2[0]):
+        for i in range(len(m_1)):
+            for j in range(len(m_1[0])):
+                add_m[i][j] = m_1[i][j] + m_2[i][j]
         return add_m  
     else:
         print("Error: Matrix shapes invalid for addition")
