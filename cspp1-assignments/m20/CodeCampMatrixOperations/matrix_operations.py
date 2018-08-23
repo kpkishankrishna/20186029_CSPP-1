@@ -39,7 +39,8 @@ def read_matrix():
         matrix = input().split(" ")
         if len(matrix) == rows:
             matrix_1.append([int(value) for value in matrix])
-        print("error")
+        else:
+            print("error")
     return matrix_1
 
 
