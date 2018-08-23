@@ -54,7 +54,9 @@ def read_matrix():
 def main():
     # read matrix 1
     matrix_1 = read_matrix()
+    print(matrix_1)
     matrix_2 = read_matrix()
+    print(matrix_2)
     matrix_3 = add_matrix(matrix_1,matrix_2)
     print(matrix_3)
 
