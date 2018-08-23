@@ -77,7 +77,7 @@ def main():
     matrix_2 = read_matrix()
     if matrix_2 is None:
         exit()
-    print(add_matrix(matrix_1,matrix_2))
+    print(add_matrix(matrix_1, matrix_2))
     print(mult_matrix(matrix_1, matrix_2))
 
 
