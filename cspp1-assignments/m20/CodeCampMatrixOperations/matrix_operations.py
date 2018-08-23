@@ -10,7 +10,7 @@ def mult_matrix(m1, m2):
     columns = len(m2[0])
     multi_matrix = [[0 for i in range(columns)] for j in range(rows)]
     add_m = re_mat(len(m1), len(m2[0]))
-    if len(m1cls[0]) == len(m2):
+    if len(m1[0]) == len(m2):
         for i in range(len(m1)):
             for j in range(len(m2[0])):
                 for k in range(len(m2)):
