@@ -64,7 +64,7 @@ def main():
 
     # multiply matrix 1 and matrix 2
     
-print(mat)
+
 
 if __name__ == '__main__':
     main()
