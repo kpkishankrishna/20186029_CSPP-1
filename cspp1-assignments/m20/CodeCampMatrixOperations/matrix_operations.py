@@ -6,7 +6,11 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    pass
+    rows = len(m1)
+    columns = len(m2[0])
+    mult_matrix = [[0]*columns]*rows
+
+
 
 def add_matrix(m1, m2):
     '''
@@ -17,10 +21,19 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     matrix_1 = []
-    if len(m1) == len(m2) and len[m1[0]] == len[m2[1]]:
-        for i in range(len(m1)):
-            matrix_1.append([m1[i]+m2[i] for i in range(len(m1[i]))])
-    return matrix_1
+    rows = len(m1)
+    columns = len(m1[0])
+    add_matrix = [[0]*columns]*rows
+    for i in len(m1):
+        for j in len(m1[i]):
+            add_matrix = m1[i[j]]+m2[i[j]] +add_matrix[i[j]]
+    print(add_matrix)
+
+    
+
+    #     for i in range(len(m1)):
+    #         matrix_1.append([m1[i]+m2[i] for i in range(len(m1[i]))])
+    # return matrix_1
 
 def read_matrix():
     '''
@@ -89,10 +102,12 @@ def main():
     # print(mat1,mat2)
 
     # add matrix 1 and matrix 2
+    matrix_3 = add_matrix(read_matrix(m1),read_matrix(m2))
 
     # multiply matrix 1 and matrix 2
     print(matrix_1)
     print(matrix_2)
+    print(matrix_3)
 
 
 if __name__ == '__main__':
