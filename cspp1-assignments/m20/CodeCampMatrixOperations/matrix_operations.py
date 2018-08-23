@@ -28,7 +28,8 @@ def add_matrix(m1, m2):
         for j in range(columns):
             add_matrix[i][j] = m1[i][j]+m2[i][j]
             print(add_matrix[i][j])
-    print(add_matrix)
+        matrix_1.append(add_matrix)
+    print(matrix_1)
 
     
 
