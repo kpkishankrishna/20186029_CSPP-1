@@ -87,7 +87,8 @@ def main():
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-    print(matrix_1,matrix_2)
+    print(matrix_1)
+    print(matrix_2)
 
 
 if __name__ == '__main__':
