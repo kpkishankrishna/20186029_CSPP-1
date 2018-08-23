@@ -46,8 +46,6 @@ def read_matrix():
         matrix = input().split(" ")
         if len(matrix) == rows:
             matrix_1.append([int(i) for i in matrix])
-        else:
-            print("error")
     return matrix_1
 
 
