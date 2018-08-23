@@ -34,6 +34,7 @@ def add_matrix(m1, m2):
     matrix_1 = []
     rows = len(m1)
     columns = len(m1[0])
+    add_m = re_mat(len(m1), len(m2[0]))
     if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
         for i in range(rows):
             for j in range(columns):
