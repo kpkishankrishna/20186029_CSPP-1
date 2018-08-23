@@ -40,13 +40,14 @@ def read_matrix():
         if length(matrix) == rows:
             matrix_1.append([int(value) for value in matrix])
         print("error")
-    print(matrix_1)
+    return matrix_1
 
 
 
 
 def main():
     # read matrix 1
+    matrix_1 = read_matrix()
 
 
     # m= int(input('rows'))
@@ -64,6 +65,7 @@ def main():
     #         mat1[i][j] = int(input())
 
     # read matrix 2
+    matrix_2 = read_matrix()
 
 
     # m= int(input('rows'))
@@ -84,7 +86,7 @@ def main():
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-    
+    print(matrix_1,matrix_2)
 
 
 if __name__ == '__main__':
