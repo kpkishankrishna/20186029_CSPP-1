@@ -32,13 +32,13 @@ def add_matrix(m_1, m_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    
+
     add_m = re_mat(len(m_1), len(m_2[0]))
     if len(m_1) == len(m_2) and len(m_1[0]) == len(m_2[0]):
         for i in range(len(m_1)):
             for j in range(len(m_1[0])):
                 add_m[i][j] = m_1[i][j] + m_2[i][j]
-        return add_m  
+        return add_m
     print("Error: Matrix shapes invalid for addition")
     return None  
 
