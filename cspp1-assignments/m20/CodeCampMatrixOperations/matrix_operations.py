@@ -34,7 +34,7 @@ def read_matrix():
     # print(matrix_1)
     matrix_1 = []
     list_input = input().split(",")
-    rows,columns = int(list_input[0],list_input[1])
+    rows,columns = int(list_input[0]),int(list_input[1])
     for i in range(rows):
         matrix = input().split(" ")
         if length(matrix) == rows:
