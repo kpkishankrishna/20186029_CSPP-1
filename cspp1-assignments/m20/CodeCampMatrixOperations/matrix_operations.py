@@ -26,16 +26,29 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    for i in range(row_size):
-        matrix_1.append(list(map(int,input().rstrip().split(" "))))
-    matrix_ = []
-    row_size=int(matrix_[0])
-    col_size=int(matrix_[1])
+    # for i in range(row_size):
+    #     matrix_1.append(list(map(int,input().rstrip().split(" "))))
+    # matrix_ = []
+    # row_size=int(matrix_[0])
+    # col_size=int(matrix_[1])
+    # print(matrix_1)
+    matrix_1 = []
+    list_input = input().split(",")
+    rows,columns = int(list_input[0],list_input[1])
+    for i in range(rows):
+        matrix = input().split(" ")
+        if length(matrix) == rows:
+            matrix_1.append([int(value) for value in matrix])
+        print("error")
     print(matrix_1)
+
+
 
 
 def main():
     # read matrix 1
+
+
     # m= int(input('rows'))
     # n = int(input('columns'))
     # mat1 =[]
@@ -50,7 +63,9 @@ def main():
     #         print("enter the rows",i+1,"enter the coulmns", j+1)
     #         mat1[i][j] = int(input())
 
-    # # read matrix 2
+    # read matrix 2
+
+
     # m= int(input('rows'))
     # n = int(input('columns'))
     # mat2 =[]
@@ -66,9 +81,9 @@ def main():
     #         mat2[i][j] = int(input())
     # print(mat1,mat2)
 
-    # add matrix 1 and matrix 2
+    add matrix 1 and matrix 2
 
-    # multiply matrix 1 and matrix 2
+    multiply matrix 1 and matrix 2
     
 
 
