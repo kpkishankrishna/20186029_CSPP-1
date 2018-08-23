@@ -24,6 +24,7 @@ def add_matrix(m1, m2):
     rows = len(m1)
     columns = len(m1[0])
     add_matrix = [[0]*columns]*rows
+    print(add_matrix)
     for i in range(rows):
         for j in range(columns):
             add_matrix[i][j] = m1[i][j]+m2[i][j]
