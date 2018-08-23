@@ -15,14 +15,14 @@ def mult_matrix(m_1, m_2):
         return add_m
     print("Error: Matrix shapes invalid for mult")
     return None
-            
+
 def re_mat(rows, columns):
     '''
     gives empty rows and columns
     '''
     multi_matrix = [[0 for i in range(columns)] for j in range(rows)]
     return multi_matrix
-                 
+
 
 def add_matrix(m_1, m_2):
     '''
@@ -42,7 +42,7 @@ def add_matrix(m_1, m_2):
     else:
         print("Error: Matrix shapes invalid for addition")
         return None  
-    
+
 
 def read_matrix():
     '''
@@ -63,7 +63,7 @@ def read_matrix():
             print("Error: Invalid input for the matrix")
             return None
     return mat
-    
+
 
 
 
