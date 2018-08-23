@@ -81,9 +81,9 @@ def main():
     #         mat2[i][j] = int(input())
     # print(mat1,mat2)
 
-    add matrix 1 and matrix 2
+    # add matrix 1 and matrix 2
 
-    multiply matrix 1 and matrix 2
+    # multiply matrix 1 and matrix 2
     
 
 
