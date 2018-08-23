@@ -8,11 +8,15 @@ def mult_matrix(m1, m2):
     '''
     rows = len(m1)
     columns = len(m2[0])
+    sum_1 = 0
     multi_matrix = [[0 for i in range(columns)] for j in range(rows)]
     for i in range(rows):
         for j in range(columns):
-            multi_matrix[i][j] = m1[i][j]*m2[j][i]
-    return multi_matrix 
+            for k in range(columns):
+                multi_matrix[i][j] += m1[i][k]*m2[j][k]
+            
+    return multi_matrix
+                 
 
 def add_matrix(m1, m2):
     '''
