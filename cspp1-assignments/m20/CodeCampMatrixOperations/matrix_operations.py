@@ -9,7 +9,7 @@ def mult_matrix(m1, m2):
     rows = len(m1)
     columns = len(m2[0])
     multi_matrix = [[0 for i in range(columns)] for j in range(rows)]
-    if len(m1[0])==len(men[2]):
+    if len(m1[0])==len(m2):
         for i in range(rows):
             for j in range(columns):
                 for k in range(len(m2)):
