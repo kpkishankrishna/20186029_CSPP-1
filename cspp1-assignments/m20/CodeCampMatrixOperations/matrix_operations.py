@@ -29,13 +29,7 @@ def add_matrix(m1, m2):
         for j in range(columns):
             add_matrix[i][j] = m1[i][j]+m2[i][j]
             print("i",str(i),"j",str(j),add_matrix[i][j])
-    print(add_matrix)
-
-    
-
-    #     for i in range(len(m1)):
-    #         matrix_1.append([m1[i]+m2[i] for i in range(len(m1[i]))])
-    # return matrix_1
+    return add_matrix
 
 def read_matrix():
     '''
@@ -45,12 +39,6 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    # for i in range(row_size):
-    #     matrix_1.append(list(map(int,input().rstrip().split(" "))))
-    # matrix_ = []
-    # row_size=int(matrix_[0])
-    # col_size=int(matrix_[1])
-    # print(matrix_1)
     matrix_1 = []
     list_input = input().split(",")
     rows,columns = int(list_input[0]),int(list_input[1])
@@ -68,46 +56,8 @@ def read_matrix():
 def main():
     # read matrix 1
     matrix_1 = read_matrix()
-
-
-    # m= int(input('rows'))
-    # n = int(input('columns'))
-    # mat1 =[]
-    # for i in range(m):
-    #     mat.append([])
-    # for i in range(m):
-    #     for j in range(n):
-    #         mat1[i].append(j)
-    #         mat1[i][j]=0
-    # for i in range(m):
-    #     for j in range(n):
-    #         print("enter the rows",i+1,"enter the coulmns", j+1)
-    #         mat1[i][j] = int(input())
-
-    # read matrix 2
     matrix_2 = read_matrix()
-
-
-    # m= int(input('rows'))
-    # n = int(input('columns'))
-    # mat2 =[]
-    # for i in range(m):
-    #     mat2.append([])
-    # for i in range(m):
-    #     for j in range(n):
-    #         mat2[i].append(j)
-    #         mat2[i][j]=0
-    # for i in range(m):
-    #     for j in range(n):
-    #         print("enter the rows",i+1,"enter the coulmns", j+1)
-    #         mat2[i][j] = int(input())
-    # print(mat1,mat2)
-
-    # add matrix 1 and matrix 2
     matrix_3 = add_matrix(matrix_1,matrix_2)
-
-    # multiply matrix 1 and matrix 2
-    
     print(matrix_3)
 
 
