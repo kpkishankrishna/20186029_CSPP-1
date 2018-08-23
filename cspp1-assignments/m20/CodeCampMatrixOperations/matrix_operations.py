@@ -6,8 +6,6 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    rows = len(m1)
-    columns = len(m2[0])
     add_m = re_mat(len(m1), len(m2[0]))
     if len(m1[0]) == len(m2):
         for i in range(len(m1)):
@@ -19,6 +17,9 @@ def mult_matrix(m1, m2):
     return None
             
 def re_mat(rows, columns):
+    '''
+    gives empty rows and columns
+    '''
     multi_matrix = [[0 for i in range(columns)] for j in range(rows)]
     return multi_matrix
                  
@@ -70,6 +71,9 @@ def read_matrix():
 
 def main():
     # read matrix 1
+    '''
+    main function
+    '''
     matrix_1 = read_matrix()
     if matrix_1 is None:
         exit()
