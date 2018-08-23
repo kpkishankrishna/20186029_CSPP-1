@@ -8,7 +8,6 @@ def mult_matrix(m1, m2):
     '''
     rows = len(m1)
     columns = len(m2[0])
-    multi_matrix = [[0 for i in range(columns)] for j in range(rows)]
     add_m = re_mat(len(m1), len(m2[0]))
     if len(m1[0]) == len(m2):
         for i in range(len(m1)):
@@ -19,7 +18,9 @@ def mult_matrix(m1, m2):
     print("Error: Matrix shapes invalid for mult")
     return None
             
-    
+def re_mat(rows, columns):
+    multi_matrix = [[0 for i in range(columns)] for j in range(rows)]
+    return multi_matrix
                  
 
 def add_matrix(m1, m2):
@@ -32,9 +33,8 @@ def add_matrix(m1, m2):
     '''
     matrix_1 = []
     rows = len(m1)
-    columns = len(m2[0])
+    columns = len(m1[0])
     if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
-        add_matrix = [[0 for i in range(columns)] for j in range(rows)]
         for i in range(rows):
             for j in range(columns):
                 add_matrix[i][j] = m1[i][j] + m2[i][j]
