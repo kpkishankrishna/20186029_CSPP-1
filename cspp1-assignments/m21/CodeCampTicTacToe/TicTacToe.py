@@ -24,9 +24,9 @@ def valid_game_check(one_list_1):
 
 def check_horizontal(game_input):
     for i in game_input:
-        if game_input[i].count(x)==3:
+        if i.count(x)==3:
             return "x"
-        if game_input[i].count(o)==3:
+        if i.count(o)==3:
             return "o"
         else:
             return None
