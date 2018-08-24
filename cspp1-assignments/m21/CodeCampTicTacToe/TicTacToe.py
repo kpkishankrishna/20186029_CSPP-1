@@ -1,5 +1,5 @@
 def read_input():
-	input1=[]
+	input1=[[],[],[]]
 	for i in range(3):
 		input_1.append(input().strip())
 	print(input_1)
