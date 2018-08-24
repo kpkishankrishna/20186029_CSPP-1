@@ -1,4 +1,5 @@
-a=[1,2,3,4,4,4]
-if a.count(4) - a.count(3) > 5 or a.count(3) - a.count(4) > 1:
-    print("yes")
-print("no") 
+def main():
+def tictac_input():
+    intac=[]
+    for i in  range(3):
+        intac.append(input().strip().split())
