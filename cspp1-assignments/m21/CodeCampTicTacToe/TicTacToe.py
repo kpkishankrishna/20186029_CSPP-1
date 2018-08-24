@@ -1,5 +1,6 @@
 def read_input():
-	input_1 = input().strip()
+	for i in range(2):
+		input_1 = input().strip()
 	print(input_1)
 
 
