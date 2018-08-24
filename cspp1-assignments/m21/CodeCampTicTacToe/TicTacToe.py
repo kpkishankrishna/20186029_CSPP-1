@@ -1,6 +1,6 @@
 def read_input():
 	for i in range(3):
-		input_1 = input()
+		input_1 += input()
 	print(input_1)
 
 
