@@ -29,8 +29,8 @@ def check_winner(game_input):
 
 def main():
     game_input = read_input()
-    one_list = one_list(game_input)
-    if valid_game_check(one_list) == False:
+    one_list_1 = one_list(game_input)
+    if valid_game_check(one_list_1) == False:
         print("invalid game")
     else:
         return check_winner(game_input)
