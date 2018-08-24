@@ -24,7 +24,7 @@ def check_valid(intac):
         return True
 def valid_game(intac):
     for i in intac:
-        if i not in "xo.":
+        if i not in ["x","o","."]:
             return 1
         elif intac.count('x') > 5 or intac.count('o') > 5:
             return False
