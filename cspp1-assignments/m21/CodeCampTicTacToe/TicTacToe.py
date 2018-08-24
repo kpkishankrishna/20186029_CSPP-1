@@ -76,25 +76,15 @@ def check_winner(game_input, one_list_1):
         return check_diagonal(game_input)
     else:
         return("draw")
-
-
-
-
-
 def main():
     game_input = read_input()
     one_list_1 = one_list(game_input)
+    print(one_list_1)
     if valid_game_check(one_list_1) == 1:
         print("invalid input")
     elif valid_game_check(one_list_1) == False:
         print("invalid game")
     elif valid_game_check(one_list_1):
         print(check_winner(game_input,one_list_1))
-
-
-    
-    
-
-
 if __name__ == '__main__':
     main()
