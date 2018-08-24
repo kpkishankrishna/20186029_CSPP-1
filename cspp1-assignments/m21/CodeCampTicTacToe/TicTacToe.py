@@ -1,7 +1,6 @@
 def read_input():
 	input_1 = input().strip()
-	if len(input_1) >= 9:
-		print("invalid game")
+	print(input_1)
 
 
 
