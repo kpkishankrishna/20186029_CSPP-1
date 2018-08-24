@@ -1,7 +1,7 @@
 def read_input():
 	input_1 = input().strip()
 	if len(input_1) >= 9:
-		return ("invalid input")
+		print("invalid input")
 
 
 
