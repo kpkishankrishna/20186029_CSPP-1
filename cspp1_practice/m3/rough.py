@@ -1,5 +1,4 @@
-rows = 3
-columns = 3
-add_matrix = [[0 for i in range(columns)] for j in range(rows)]
-add_matrix[0][2] += 2
-print(add_matrix)
+a=[1,2,3,4,4,4]
+if a.count(4) - a.count(3) > 5 or a.count(3) - a.count(4) > 1:
+    print("yes")
+print("no") 
