@@ -2,7 +2,7 @@ def read_input():
 	input1=[]
 	for i in range(3):
 		input_1.append(input().split(" "))
-	print(input_1)
+	return input_1
 
 
 
@@ -15,6 +15,7 @@ def check_winner(game_input):
 
 def main():
 	game_input = read_input()
+	print(game_input)
 	winner = check_winner(game_input)
 
 
