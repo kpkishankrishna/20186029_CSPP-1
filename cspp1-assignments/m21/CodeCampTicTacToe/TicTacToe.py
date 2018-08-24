@@ -75,7 +75,7 @@ def check_winner(game_input, one_list_1):
     elif check_diagonal(one_list_1) != None:
         return check_diagonal(game_input)
     else:
-        return("draw")
+        return draw
 def main():
     game_input = read_input()
     one_list_1 = one_list(game_input)
