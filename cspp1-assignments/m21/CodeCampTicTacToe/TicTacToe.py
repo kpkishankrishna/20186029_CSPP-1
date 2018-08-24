@@ -11,12 +11,12 @@ def one_list(game_input):
             one_list.append(game_input[i][j])
     print(one_list)
 def valid_game_check(one_list_1):
-    for i in range(len(one_list)):
+    for i in range(len(one_list_1)):
         if i not in "xo.":
             return False
-        elif one_list.count(x) > 5 or one_list.count(o) > 5:
+        elif one_list_1.count(x) > 5 or one_list_1.count(o) > 5:
             return False
-        elif one_list.count(x) - one_list.count(o) > 1 or one_list.count(o) - one_list.count(x) >1:
+        elif one_list_1.count(x) - one_list_1.count(o) > 1 or one_list_1.count(o) - one_list_1.count(x) >1:
             return False
         else:
             return True
