@@ -14,14 +14,13 @@ def one_list(game_input):
 def valid_game_check(one_list_1):
     for i in one_list_1:
         if i not in 'xo.':
-            print(1)
+            return("1")
     if one_list_1.count('x') > 5 or one_list_1.count('o') > 5:
-        print(False)
+        return False
     elif one_list_1.count('x') - one_list_1.count('o') > 1 or one_list_1.count('o') - one_list_1.count('x') >1:
-        print(False)
+        return False
     else:
-        print(True)
-
+        return True
 def check_horizontal(game_input):
     for i in game_input:
         if i.count(x)==3:
