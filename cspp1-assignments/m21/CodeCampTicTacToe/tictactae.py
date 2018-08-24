@@ -6,35 +6,26 @@ def winner_check(matrix):
     '''
 it gives the output coditions
     '''
-    # return_string = ''
-    # if matrix[0][0] == matrix[1][1] == matrix[2][2]:
-    #     return_string = matrix[0][0]
-    # elif matrix[0][2] == matrix[1][1] == matrix[2][0]:
-    #     return_string = matrix[0][2]
-    # elif matrix[0][0] == matrix[1][0] == matrix[2][0]:
-    #     return_string = matrix[0][0]
-    # elif matrix[0][1] == matrix[1][1] == matrix[2][1]:
-    #     return_string = matrix[0][1]
-    # elif matrix[0][2] == matrix[1][2] == matrix[2][2]:
-    #     return_string = matrix[0][2]
-    # elif matrix[0][0] == matrix[0][1] == matrix[0][2]:
-    #     return_string = matrix[0][0]
-    # elif matrix[1][0] == matrix[1][1] == matrix[1][2]:
-    #     return_string = matrix[1][0]
-    # elif matrix[2][0] == matrix[2][1] == matrix[2][2]:
-    #     return_string = matrix[2][0]
-    # else:
-    #     return_string = "invalid input"
-    # return return_string
-    flip_matrix = zip(*matrix)
-    if is_verification_rows_columns(flip_matrix, check_variable) or\
-        is_verification_rows_columns(matrix, check_variable):
-        return True
-    elif (matrix[0][0] == matrix[1][1] == matrix[2][2] == check_variable) or\
-        (matrix[0][2] == matrix[1][1] == matrix[2][0] == check_variable):
-        return True
+    return_string = ''
+    if matrix[0][0] == matrix[1][1] == matrix[2][2]:
+        return_string = matrix[0][0]
+    elif matrix[0][2] == matrix[1][1] == matrix[2][0]:
+        return_string = matrix[0][2]
+    elif matrix[0][0] == matrix[1][0] == matrix[2][0]:
+        return_string = matrix[0][0]
+    elif matrix[0][1] == matrix[1][1] == matrix[2][1]:
+        return_string = matrix[0][1]
+    elif matrix[0][2] == matrix[1][2] == matrix[2][2]:
+        return_string = matrix[0][2]
+    elif matrix[0][0] == matrix[0][1] == matrix[0][2]:
+        return_string = matrix[0][0]
+    elif matrix[1][0] == matrix[1][1] == matrix[1][2]:
+        return_string = matrix[1][0]
+    elif matrix[2][0] == matrix[2][1] == matrix[2][2]:
+        return_string = matrix[2][0]
     else:
-        return False
+        return_string = "invalid input"
+    return return_string
 def vaild_check(matrix):
     '''
    It checks for the condition
