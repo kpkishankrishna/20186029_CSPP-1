@@ -1,4 +1,4 @@
-one_list_1 = ["x","o",".",'1']
+one_list_1 = ["x","o","."]
 for i in one_list_1:
         if i not in 'xo.':
             print(1)
