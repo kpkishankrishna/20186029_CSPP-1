@@ -13,7 +13,7 @@ def one_list(game_input):
 
 def valid_game_check(one_list_1):
     for i in one_list_1:
-        if i not in "xo.":
+        if i not in ["x","o","."]:
             return 1
         elif one_list_1.count('x') > 5 or one_list_1.count('o') > 5:
             return False
