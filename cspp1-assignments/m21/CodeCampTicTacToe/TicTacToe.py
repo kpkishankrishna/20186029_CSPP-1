@@ -10,7 +10,7 @@ def one_list(game_input):
         for j in range(len(game_input[i])):
             one_list.append(game_input[i][j])
     print(one_list)
-def valid_game_check(one_list):
+def valid_game_check(one_list_1):
     for i in range(len(one_list)):
         if i not in "xo.":
             return False
