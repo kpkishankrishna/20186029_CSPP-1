@@ -1,7 +1,7 @@
 def read_input():
 	input1=[]
 	for i in range(3):
-		input_1.append(input().split(""))
+		input_1.append(input().split(" "))
 	print(input_1)
 
 
