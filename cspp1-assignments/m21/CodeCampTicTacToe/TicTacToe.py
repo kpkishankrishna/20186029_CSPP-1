@@ -5,8 +5,8 @@ def read_input():
 	
 def one_list(game_input):
 	one_list = []
-	for i in game_input:
-		for j in game_input[i]:
+	for i in range(len(game_input)):
+		for j in range(len(game_input[i])):
 			one_list.append(j)
 	print(one_list)
 
