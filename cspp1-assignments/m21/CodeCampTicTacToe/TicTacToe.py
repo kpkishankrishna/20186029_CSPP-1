@@ -7,7 +7,7 @@ def one_list(game_input):
 	one_list = []
 	for i in range(len(game_input)):
 		for j in range(len(game_input[i])):
-			one_list.append(j)
+			one_list.append(game_input[i][j])
 	print(one_list)
 
 
