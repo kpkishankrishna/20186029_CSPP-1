@@ -9,7 +9,6 @@ def main():
             print("invalid game")    
     else:
         print("invalid input")
-
 def tictac_input():
     intac=[]
     for i in  range(3):
