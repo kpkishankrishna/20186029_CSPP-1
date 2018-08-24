@@ -2,7 +2,7 @@
 def main():
     intac = tictac_input()
     valid_check = check_valid(intac)
-    if valid_check(intac):
+    if valid_check:
         if valid_game(intac):
             pass
         else:
