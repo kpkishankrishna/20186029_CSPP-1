@@ -22,6 +22,7 @@ def check_winner(game_input):
 def main():
 	game_input = read_input()
 	winner = check_winner(game_input)
+	print(one_list(game_input))
 
 
 if __name__ == '__main__':
