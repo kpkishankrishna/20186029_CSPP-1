@@ -1,4 +1,5 @@
-main()
+if __name__ == '__main__':
+    main()
 def main():
     intac = tictac_input()
     valid_check = check_valid(intac)
