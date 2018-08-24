@@ -1,13 +1,12 @@
-if __name__ == '__main__':
-    main()
+
 def main():
     intac = tictac_input()
     valid_check = check_valid(intac)
     if valid_check == True:
-        pass
+        if valid_game(intac)
     else:
         print("invalid input")
-        
+
 def tictac_input():
     intac=[]
     for i in  range(3):
@@ -20,3 +19,10 @@ def check_valid(intac):
                 return False
     else:
         return True
+def valid_game(intac):
+    pass
+
+
+
+if __name__ == '__main__':
+    main()
