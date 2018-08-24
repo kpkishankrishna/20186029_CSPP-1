@@ -2,6 +2,7 @@ def read_input():
 	input_1=[]
 	for i in range(3):
 		input_1.append(input().split(" "))
+	return(input_1)
 	
 def one_list(game_input):
 	one_list = []
