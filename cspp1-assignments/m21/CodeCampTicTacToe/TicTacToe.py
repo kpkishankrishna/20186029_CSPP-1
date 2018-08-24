@@ -2,7 +2,13 @@ def read_input():
 	input_1=[]
 	for i in range(3):
 		input_1.append(input().split(" "))
-	print(input_1)
+	
+def one_list(game_input):
+	one_list = []
+	for i in game_input:
+		for j in game_input[i]:
+			one_list.append(j)
+	print(one_list)
 
 
 
