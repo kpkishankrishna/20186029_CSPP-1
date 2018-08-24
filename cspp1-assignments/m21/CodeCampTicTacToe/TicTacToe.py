@@ -1,5 +1,5 @@
 def read_input():
-	input1=[]
+	input_1=[]
 	for i in range(3):
 		input_1.append(input().split(" "))
 	return input_1
