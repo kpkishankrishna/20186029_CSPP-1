@@ -9,7 +9,7 @@ def one_list(game_input):
     for i in range(len(game_input)):
         for j in range(len(game_input[i])):
             one_list.append(game_input[i][j])
-    return one_list
+    print(one_list)
 
 def valid_game_check(one_list_1):
     for i in one_list_1:
