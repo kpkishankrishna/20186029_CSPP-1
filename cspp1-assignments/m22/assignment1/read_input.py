@@ -19,7 +19,7 @@ def main():
     main function
     '''
     read_input = input_reading()
-    for i in take_input:
+    for i in read_input:
         print(i)
 
 
