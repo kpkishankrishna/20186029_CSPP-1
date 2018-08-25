@@ -2,10 +2,10 @@ a = {'This': 1, 'is': 1, 'assignment': 1, '3': 1, 'in': 1, 'Week': 1, '4': 1, 'E
 c=[]
 for i in a:
     if a[i] == 2:
-        i = i+("- ##")
+        i = i+(" - 2")
         c.append(i)
     else:
-        i = i+("- #")
+        i = i+(" - 1")
         c.append(i)
 c.sort()
 for i in c:
