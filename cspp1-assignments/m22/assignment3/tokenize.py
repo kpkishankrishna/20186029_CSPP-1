@@ -5,11 +5,11 @@ each word
 
 def tokenize(string,no_of_lines):
     
-    c=[]
+    one_list = []
     for i in range(no_of_lines):
-    	for j in string:
-    		c.append(j)
-    return c
+        for j in range(string[i]):
+            one_list.append(string[i][j])
+    return one_list
 
 
 #     c={}
@@ -27,9 +27,9 @@ def main():
 	string = []
 	for i in range(no_of_lines):
 		string.append(input().strip().split(" "))
-	print(string)
+	
 
-	# print(tokenize(string,no_of_lines))
+	print(tokenize(string,no_of_lines))
 
     
 
