@@ -7,8 +7,7 @@ def tokenize(string):
     
     one_list = []
     for i in range(len(string)):
-        for j in range(string[i]):
-            one_list.append(string[i][j])
+        one_list.append(string[i])
     return one_list
 
 
