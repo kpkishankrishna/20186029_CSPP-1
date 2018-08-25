@@ -10,9 +10,9 @@ def tokenize(string):
             
 def main():
 	no_of_lines = int(input())
-	string = []
+	string = ""
 	for i in range(no_of_lines):
-		string.append(input())
+		string += input()
 	print(string)
 
     
