@@ -4,8 +4,15 @@ each word
 '''
 
 def tokenize(string):
-    string = string.strip().split(" ")
+    
     return (string)
+#     c={}
+# for i in a:
+#     if i not in c:
+#         c[i]=1
+#     else:
+#         c[i]+=1
+
     
 
             
@@ -13,7 +20,7 @@ def main():
 	no_of_lines = int(input())
 	string = ""
 	for i in range(no_of_lines):
-		string += input()
+		string += input().strip().split()
 	print(tokenize(string))
 
     
