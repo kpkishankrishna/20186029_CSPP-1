@@ -5,19 +5,20 @@ each word
 
 def tokenize(string):
     
-    one_list = []
-    for i in range(len(string)):
-        for j in range(string[i]):
-            one_list.append(string[i][j])
-    print(one_list)
+    # one_list = []
+    # for i in range(len(string)):
+    #     for j in range(string[i]):
+    #         one_list.append(string[i][j])
+    # print(one_list)
 
 
-#     c={}
-# for i in a:
-#     if i not in c:
-#         c[i]=1
-#     else:
-#         c[i]+=1
+    c={}
+    for i in a:
+        if i not in c:
+            c[i]=1
+        else:
+            c[i]+=1
+    return c
 
     
 
