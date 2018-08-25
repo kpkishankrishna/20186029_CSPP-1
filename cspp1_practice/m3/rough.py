@@ -1,3 +1,8 @@
-a=[1,2,3]
+a= "!@#$%^&*()"
+b=[]
+a= a.split(" ")
+
 for i in a:
-    print(i)
+    for j in i:
+        b.append(j)
+print(b)

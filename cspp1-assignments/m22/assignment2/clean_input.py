@@ -4,7 +4,12 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-    pass
+    string = string.split(" ")
+    new_list=[]
+    for i in string:
+    	for j in i:
+    		new_list.append(j)
+    print(new_list)
 
 def main():
     string = input()
