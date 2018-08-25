@@ -7,7 +7,8 @@ def tokenize(string,no_of_lines):
     
     c=[]
     for i in range(no_of_lines):
-    	c.append(string)
+    	for j in range(string):
+    		c.append(j)
     return c
 
 
