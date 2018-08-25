@@ -9,7 +9,7 @@ def clean_string(string):
     cleaning the string
     '''
     string = string.split(" ")
-    new_list=[]
+    new_list = []
     clean_list = []
     clean_str=""
     for i in string:
