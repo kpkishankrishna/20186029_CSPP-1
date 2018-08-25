@@ -9,10 +9,9 @@ def input_reading():
     no_of_lines = int(input())
     take_input = []
     for i in range(no_of_lines):
+        del i
         take_input.append(input())
     return take_input
-    
-    
 
 def main():
     '''
