@@ -1,1 +1,3 @@
-print("my name is kirshna\n prasad")
+a=[1,2,3]
+for i in a:
+    print(i)

@@ -6,7 +6,9 @@ def input_reading():
 	take_input = []
 	for i in range(no_of_lines):
 		take_input.append(input())
-	print(take_input)
+	for i in take_input:
+		print(i)
+	
 
 def main():
     read_input = input_reading()
