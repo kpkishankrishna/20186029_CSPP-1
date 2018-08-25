@@ -10,8 +10,8 @@ def input_reading():
     take_input = []
     for i in range(no_of_lines):
         take_input.append(input())
-    for i in take_input:
-        print(i)
+    return take_input
+    
     
 
 def main():
@@ -19,6 +19,9 @@ def main():
     main function
     '''
     read_input = input_reading()
+    for i in take_input:
+        print(i)
+
 
 if __name__ == '__main__':
     main()
