@@ -25,7 +25,8 @@ def tokenize(string):
             
 def main():
 	no_of_lines = int(input())
-    string = input().strip().split(" ")
+    string=[]
+    string.append(input().split(" "))
     print(string)
 	# string = []
 	# for i in range(no_of_lines):
