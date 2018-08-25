@@ -20,8 +20,8 @@ def main():
 	no_of_lines = int(input())
 	string = ""
 	for i in range(no_of_lines):
-		string += input()
-	
+		string += input().strip()
+
 	print(tokenize(string))
 
     
