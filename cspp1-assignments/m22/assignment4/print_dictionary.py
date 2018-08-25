@@ -20,7 +20,7 @@ def print_dictionary(dictionary):
 def main():
     dictionary = eval(input())
     list_dict = print_dictionary(dictionary)
-    for i in c:
+    for i in list_dict:
         print(i)
 
 
