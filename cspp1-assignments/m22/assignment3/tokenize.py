@@ -7,7 +7,7 @@ def tokenize(string):
     '''
     creating a dictionary with frequency
     '''
-    
+
     dictionary_final = {}
     for element_in_dic in string:
         if element_in_dic not in dictionary_final:
@@ -28,7 +28,8 @@ def main():
     # print(string)
     string = []
     for i in range(no_of_lines):
-      string.extend(input().strip().split(" "))
+        del i
+        string.extend(input().strip().split(" "))
     print(tokenize(string))
 
 
