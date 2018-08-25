@@ -6,9 +6,8 @@ each word
 def tokenize(string,no_of_lines):
     
     c=[]
-    for i in range(no_of_lines):
-    	for j in string:
-    		c.append(j)
+    for j in string:
+    	c.append(j)
     return c
 
 
