@@ -14,7 +14,7 @@ def print_dictionary(dictionary):
             i = i+("- #")
             c.append(i)
     c.sort()
-    print(c)
+    return c
     
 
 def main():
