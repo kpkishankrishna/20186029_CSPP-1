@@ -6,8 +6,8 @@ the key and frequency with a SPACE - SPACE.
 
 def print_dictionary(dictionary):
     c=[]
-    for i in a:
-        if a[i] == 2:
+    for i in dictionary:
+        if dictionary[i] == 2:
             i = i+("- ##")
             c.append(i)
         else:
