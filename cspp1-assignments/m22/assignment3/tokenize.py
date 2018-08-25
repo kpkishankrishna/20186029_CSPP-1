@@ -3,10 +3,10 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 
-def tokenize(string,no_of_lines):
+def tokenize(string):
     
     one_list = []
-    for i in range(no_of_lines):
+    for i in range(len(string)):
         for j in range(string[i]):
             one_list.append(string[i][j])
     return one_list
