@@ -1,9 +1,12 @@
-a = "lorem ipsum porem lorem ipsum porem"
-a=a.split(" ")
-c={}
+a = {'lorem': 2, 'ipsum': 2, 'porem': 2}
+c=[]
 for i in a:
-    if i not in c:
-        c[i]=1
+    if a[i] == 2:
+        i = i+("- ##")
+        c.append(i)
     else:
-        c[i]+=1
-print(c)
+        i = i+("- #")
+        c.append(i)
+c.sort()
+for i in c:
+    print(i)
