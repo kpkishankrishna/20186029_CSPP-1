@@ -8,10 +8,10 @@ def print_dictionary(dictionary):
     c=[]
     for i in dictionary:
         if dictionary[i] == 2:
-            i = i+("- ##")
+            i = i + dictionary[i]
             c.append(i)
         else:
-            i = i+("- #")
+            i = i+ dictionary[i]
             c.append(i)
     c.sort()
     return c
