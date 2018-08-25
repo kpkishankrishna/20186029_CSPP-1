@@ -11,7 +11,7 @@ def clean_string(string):
     string = string.split(" ")
     new_list = []
     clean_list = []
-    clean_str=""
+    clean_str = ""
     for i in string:
         for j in i:
             new_list.append(j)
