@@ -12,7 +12,7 @@ def clean_string(string):
         for j in i:
             new_list.append(j)
     for i in new_list:
-        if i in "1234567890qwertyuiopkjhgfdsazxcvbnQWERTYUIOPLKJHGFSAXCVBNM":
+        if i in "1234567890qwertyuiopasdfghjklmnbvcxzQWERTYUIOPLKJHGFSAXCVBNM":
             clean_list.append(i)
     for i in clean_list:
         clean_str += i
