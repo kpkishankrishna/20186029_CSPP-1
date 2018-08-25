@@ -20,9 +20,7 @@ def frequency_graph(dictionary):
     return list_dict
 
 def main():
-	'''
-	main function
-	'''
+	
     dictionary = eval(input())
     list_dict = frequency_graph(dictionary)
     for i in list_dict:
