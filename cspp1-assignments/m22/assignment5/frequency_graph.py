@@ -7,10 +7,10 @@ def frequency_graph(dictionary):
     c=[]
     for i in dictionary:
         if dictionary[i] == 2:
-            i = i+("- ##")
+            i = i+(" - ##")
             c.append(i)
         else:
-            i = i+("- #")
+            i = i+(" - #")
             c.append(i)
     c.sort()
     return c
