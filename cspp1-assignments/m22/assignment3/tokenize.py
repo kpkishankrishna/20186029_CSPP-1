@@ -4,7 +4,8 @@ each word
 '''
 
 def tokenize(string):
-    pass
+    string = string.strip().split(" ")
+    return (string)
     
 
             
@@ -13,7 +14,7 @@ def main():
 	string = ""
 	for i in range(no_of_lines):
 		string += input()
-	print(string)
+	print(tokenize(string))
 
     
 
