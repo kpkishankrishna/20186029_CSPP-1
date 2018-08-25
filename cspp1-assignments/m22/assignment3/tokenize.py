@@ -4,26 +4,25 @@ each word
 '''
 
 def tokenize(string):
+    '''
+    creating a dictionary with frequency
+    '''
     
-    # one_list = []
-    # for i in range(len(string)):
-    #     for j in range(string[i]):
-    #         one_list.append(string[i][j])
-    # print(one_list)
-
-
-    c={}
-    for i in string:
-        if i not in c:
-            c[i]=1
+    dictionary_final={}
+    for element_in_dic in string:
+        if element_in_dic not in dictionary_final:
+            dictionary_final[element_in_dic]=1
         else:
-            c[i]+=1
-    return c
+            dictionary_final[element_in_dic]+=1
+    return dictionary_final
 
     
 
             
 def main():
+    '''
+    main function
+    '''
     no_of_lines = int(input())
     # string = []
     # string.append(input().split(" "))
