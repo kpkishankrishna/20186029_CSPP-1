@@ -1,4 +1,4 @@
-a = {'lorem': 2, 'ipsum': 2, 'porem': 2}
+a = {'This': 1, 'is': 1, 'assignment': 1, '3': 1, 'in': 1, 'Week': 1, '4': 1, 'Exam': 1}
 c=[]
 for i in a:
     if a[i] == 2:
