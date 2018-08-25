@@ -5,9 +5,17 @@ each word
 
 def tokenize(string):
     pass
+    
+
             
 def main():
-    pass
+	no_of_lines = int(input())
+	string = []
+	for i in no_of_lines:
+		string.append(input)
+	print(string)
+
+    
 
 if __name__ == '__main__':
     main()

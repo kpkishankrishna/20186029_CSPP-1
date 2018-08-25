@@ -1,12 +1,9 @@
-a= "!@#$%^&*()"
-b=[]
-c=""
-a= a.split(" ")
-
+a = "lorem ipsum porem lorem ipsum porem"
+a=a.split(" ")
+c={}
 for i in a:
-    for j in i:
-        b.append(j)
-for i in b:
-    c+=i
+    if i not in c:
+        c[i]=1
+    else:
+        c[i]+=1
 print(c)
-
