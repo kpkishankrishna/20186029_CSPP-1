@@ -14,12 +14,15 @@ def print_dictionary(dictionary):
             i = i+("- #")
             c.append(i)
     c.sort()
-    for i in c:
-        return i
+    return c
+    
 
 def main():
     dictionary = eval(input())
-    print_dictionary(dictionary)
+    list_dict = print_dictionary(dictionary)
+    for i in c:
+        print(i)
+
 
 if __name__ == '__main__':
     main()
