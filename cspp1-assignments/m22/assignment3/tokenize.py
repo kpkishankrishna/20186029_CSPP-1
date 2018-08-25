@@ -3,9 +3,14 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 
-def tokenize(string):
+def tokenize(string,no_of_lines):
     
-    return (string)
+    c=[]
+    for i in range(no_of_lines):
+    	c.append(i)
+    return c
+
+
 #     c={}
 # for i in a:
 #     if i not in c:
@@ -23,7 +28,7 @@ def main():
 		string.append(input().strip().split(" "))
 	
 
-	print(tokenize(string))
+	print(tokenize(string,no_of_lines))
 
     
 
