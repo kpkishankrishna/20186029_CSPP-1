@@ -13,7 +13,7 @@ def tokenize(string):
 
 
     c={}
-    for i in a:
+    for i in string:
         if i not in c:
             c[i]=1
         else:
