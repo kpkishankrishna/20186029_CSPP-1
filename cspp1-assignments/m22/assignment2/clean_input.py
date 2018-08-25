@@ -9,7 +9,7 @@ def clean_string(string):
     for i in string:
     	for j in i:
     		new_list.append(j)
-    print(new_list)
+    return new_list
 
 def main():
     string = input()
