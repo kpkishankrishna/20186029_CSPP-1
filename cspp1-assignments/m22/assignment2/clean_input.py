@@ -5,6 +5,9 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
+    '''
+    cleaning the string
+    '''
     string = string.split(" ")
     new_list=[]
     clean_list = []
@@ -21,6 +24,9 @@ def clean_string(string):
 
 
 def main():
+    '''
+    main function
+    '''
     string = input()
     print(clean_string(string))
 
