@@ -13,7 +13,7 @@ def tokenize(string):
         if element_in_dic not in dictionary_final:
             dictionary_final[element_in_dic] = 1
         else:
-            dictionary_final[element_in_dic] += a1
+            dictionary_final[element_in_dic] += 1
     return dictionary_final
 
 def main():
