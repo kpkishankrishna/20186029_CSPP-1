@@ -27,6 +27,8 @@ def main():
     no_of_lines = int(input())
     string = []
     string.append(input().split(" "))
+    for i in string:
+        string = i
     print(string)
     # string = []
     # for i in range(no_of_lines):
