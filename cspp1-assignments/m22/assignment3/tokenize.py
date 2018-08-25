@@ -29,7 +29,7 @@ def main():
 		string.append(input().strip().split(" "))
 	
 
-	print(tokenize(string,no_of_lines))
+	print(tokenize(string))
 
     
 
