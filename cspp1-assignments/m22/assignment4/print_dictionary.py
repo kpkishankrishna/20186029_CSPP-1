@@ -9,7 +9,7 @@ def print_dictionary(dictionary):
     '''
     dictionary into list
     '''
-    list_dict=[]
+    list_dict = []
     for i in dictionary:
         if dictionary[i] == 2:
             i = i+(" - 2")
