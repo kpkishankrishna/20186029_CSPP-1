@@ -29,7 +29,7 @@ def main():
     string.append(input().split(" "))
     for i in string:
         string = i
-    print(string)
+    # print(string)
     # string = []
     # for i in range(no_of_lines):
     #   string.append(input().strip().split(" "))
