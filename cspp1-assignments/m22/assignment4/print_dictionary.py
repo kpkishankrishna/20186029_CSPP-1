@@ -15,7 +15,7 @@ def print_dictionary(dictionary):
             c.append(i)
     c.sort()
     for i in c:
-        print(i)
+        return i
 
 def main():
     dictionary = eval(input())
