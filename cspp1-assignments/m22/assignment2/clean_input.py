@@ -8,12 +8,12 @@ def clean_string(string):
     new_list=[]
     clean_list = []
     for i in string:
-    	for j in i:
-    		new_list.append(j)
+        for j in i:
+            new_list.append(j)
     for i in new_list:
-    	if i in "1234567890qwertyuiopkjhgfdsazxcvbnQWERTYUIOPLKJHGFSAXCVBNM":
-    		clean_list.append(i)
-	return clean_list
+        if i in "1234567890qwertyuiopkjhgfdsazxcvbnQWERTYUIOPLKJHGFSAXCVBNM":
+            clean_list.append(i)
+    print(clean_list)
 
 def main():
     string = input()
