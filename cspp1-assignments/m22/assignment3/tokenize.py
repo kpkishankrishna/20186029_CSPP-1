@@ -21,6 +21,7 @@ def main():
 	string = []
 	for i in range(no_of_lines):
 		string.append(input())
+	string.strip().split(" ")
 
 	print(tokenize(string))
 
