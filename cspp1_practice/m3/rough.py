@@ -1,12 +1,22 @@
-a = {'This': 1, 'is': 1, 'assignment': 1, '3': 1, 'in': 1, 'Week': 1, '4': 1, 'Exam': 1}
-c=[]
-for i in a:
-    if a[i] == 2:
-        i = i+(" - 2")
-        c.append(i)
-    else:
-        i = i+(" - 1")
-        c.append(i)
-c.sort()
-for i in c:
-    print(i)
+if __name__ == '__main__':
+    main()
+    # N = int(raw_input())
+def main ():
+    list = []
+    lines = int(input())
+    for i in range(lines) :
+        thislist = input().split(" ")
+        if (thislist[0] == "insert"):
+            list[thislist[1]] = thislist[2]
+        elif (thislist[0] == "remove"):
+            list.remove(thislist[1])
+        elif (thislist[0] == "append") :
+            list.append(thislist[1])
+        elif (thislist[0] == "print"):
+            print(list)
+        elif (thislist[0] == "reverse"):
+            list.reverse()
+        elif (thislist[0] == "pop"):
+            list.pop(len(list))
+        elif (thislist[0] == "sort"):
+            list.sort
